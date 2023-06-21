@@ -14,9 +14,11 @@ module.exports = {
       },
     },
     colors: {
+      'white': '#FFFFFF',
       'dark-gray': '#3D3D3C',
       'green': '#159641',
       'orange': '#F29217',
+      'transparent': 'rgba(0, 0, 0, 0.75)',
     },
   },
   plugins: [],
