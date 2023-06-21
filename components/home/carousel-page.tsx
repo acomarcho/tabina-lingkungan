@@ -31,10 +31,23 @@ export default function CarouselPage({ page }: Props) {
 
   return (
     <div
-      className="h-[560px] transition-all bg-no-repeat bg-cover"
+      className="h-[100vh] transition-all bg-no-repeat bg-cover"
       style={{
         backgroundImage: `url(${page.images[imageIndex]})`,
       }}
-    ></div>
+    >
+      <div className="bg-transparent max-w-[480px] p-[1.5rem] relative">
+        <h1 className="font-bold text-white text-[2rem]">{page.title}</h1>
+        <p className="text-white">{page.description}</p>
+        <div className="flex gap-[1rem] absolute bottom-[-1.5rem] left-[1.5rem]">
+          <button className="bg-orange px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.1]">
+            Hubungi kami
+          </button>
+          <button className="bg-green px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.1]">
+            Selengkapnya
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
