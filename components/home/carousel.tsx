@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import CarouselPage from "./carousel-page";
+import { Carousel } from "antd";
+import { CarouselRef } from "antd/es/carousel";
 
 const pages = [
   {
@@ -39,8 +41,22 @@ const pages = [
   },
 ];
 
-export default function Carousel() {
-  const [currentPage, setCurrentPage] = useState<number>(0);
+export default function MyCarousel() {
+  const carouselRef = useRef<CarouselRef>(null);
 
-  return <CarouselPage page={pages[currentPage]} />;
+  const handleNext = () => {
+    carouselRef.current?.next();
+  };
+
+  const handlePrev = () => {
+    carouselRef.current?.prev();
+  };
+
+  return (
+    <Carousel ref={carouselRef} dotPosition="top">
+      <CarouselPage page={pages[0]} handleNext={handleNext} handlePrev={handlePrev} />
+      <CarouselPage page={pages[1]} handleNext={handleNext} handlePrev={handlePrev} />
+      <CarouselPage page={pages[2]} handleNext={handleNext} handlePrev={handlePrev} />
+    </Carousel>
+  );
 }

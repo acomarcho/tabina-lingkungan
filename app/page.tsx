@@ -1,4 +1,4 @@
-import Carousel from "@/components/home/carousel";
+import MyCarousel from "@/components/home/carousel";
 
 export const metadata = {
   title: "Home",
@@ -8,7 +8,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Carousel />
+      <MyCarousel />
     </>
   );
 }

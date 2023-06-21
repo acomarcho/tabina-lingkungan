@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 interface Props {
@@ -9,9 +10,11 @@ interface Props {
     position: string;
     images: string[];
   };
+  handleNext: () => void;
+  handlePrev: () => void;
 }
 
-export default function CarouselPage({ page }: Props) {
+export default function CarouselPage({ page, handleNext, handlePrev }: Props) {
   const [imageIndex, setImageIndex] = useState<number>(0);
   const imageTimeout = 3000;
 
@@ -31,13 +34,13 @@ export default function CarouselPage({ page }: Props) {
 
   let responsiveLayout = "";
   if (page.position === "topRight") {
-    responsiveLayout = "lg:absolute lg:top-[1.5rem] lg:right-[1.5rem]";
+    responsiveLayout = "lg:absolute lg:top-[5.5rem] lg:right-[5.5rem]";
   } else if (page.position === "topLeft") {
-    responsiveLayout = "lg:absolute lg:top-[1.5rem] lg:left-[1.5rem]";
+    responsiveLayout = "lg:absolute lg:top-[5.5rem] lg:left-[5.5rem]";
   } else if (page.position === "bottomLeft") {
-    responsiveLayout = "lg:absolute lg:bottom-[3.5rem] lg:left-[1.5rem]";
+    responsiveLayout = "lg:absolute lg:bottom-[7.5rem] lg:left-[5.5rem]";
   } else if (page.position === "bottomRight") {
-    responsiveLayout = "lg:absolute lg:bottom-[3.5rem] lg:right-[1.5rem]";
+    responsiveLayout = "lg:absolute lg:bottom-[7.5rem] lg:right-[5.5rem]";
   }
 
   return (
@@ -47,6 +50,7 @@ export default function CarouselPage({ page }: Props) {
         backgroundImage: `url(${page.images[imageIndex]})`,
       }}
     >
+      {/* Information banner */}
       <div
         className={`bg-transparent w-[100%] lg:max-w-[480px] p-[2rem] relative ${responsiveLayout}`}
       >
@@ -64,6 +68,21 @@ export default function CarouselPage({ page }: Props) {
             Selengkapnya
           </button>
         </div>
+      </div>
+      {/* Arrows */}
+      <div className="flex justify-between absolute top-[50%] translate-y-[-50%] left-0 right-0 lg:px-[2rem]">
+        <button
+          className="text-white font-bold text-[2rem]"
+          onClick={handlePrev}
+        >
+          <Image src="/icons/chevron-left.png" alt="Chevron left icon" width={20} height={40} />
+        </button>
+        <button
+          className="text-white font-bold text-[2rem]"
+          onClick={handleNext}
+        >
+          <Image src="/icons/chevron-right.png" alt="Chevron right icon" width={20} height={40} />
+        </button>
       </div>
     </div>
   );
