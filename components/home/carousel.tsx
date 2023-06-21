@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import CarouselPage from "./carousel-page";
 
 const pages = [
   {
@@ -41,5 +42,5 @@ const pages = [
 export default function Carousel() {
   const [currentPage, setCurrentPage] = useState<number>(0);
 
-  return <h1>My carousel component.</h1>;
+  return <CarouselPage page={pages[currentPage]} />;
 }
