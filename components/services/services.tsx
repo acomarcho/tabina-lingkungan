@@ -110,18 +110,30 @@ const services: Service[] = [
       {
         id: 1,
         title: "SUPERVISI PREPARASI PERTEK",
+        image: "/images/services-3-1.png",
+        description:
+          "Kegiatan mengurus berbagai perizinan kegiatan pengelolaan lingkungan melalui PERTEK menjadi tanggung jawab setiap perusahaan. Meski dirasa lebih kompleks dalam pengurusannya, dengan sejumlah pertanyaan dan persyaratan teknis yang harus dijawab dan disediakan oleh pihak perusahaan, banyak perusahaan, melalui staf khususnya, mampu melakukan pengurusan perizinan tersebut secara mandiri. Namun, terdapat pula beberapa perusahaan, yang karena suatu hal, masih membutuhkan jasa pendampingan dan supervisi berbagai kegiatan persiapan pengurusan PERTEK hingga terbit SLO tersebut.",
       },
       {
         id: 2,
         title: "PENYUSUNAN & DOKUMEN REVISI UKL - UPL/AMDAL",
+        image: "/images/services-3-2.png",
+        description:
+          "Bisa dimaklumi, dengan berjalannya waktu, data-data dan informasi yang tercantum di dalam dokumen UKL-UPL/AMDAL bisa saja sudah tidak sesuai lagi, karena antara lain kapasitas produksi berubah, diagram alir proses produksi berubah, bahan baku atau penunjang berubah, jenis produk berubah, dsb. Untuk itu diperlukan kegiatan revisi dokumen UKL-UPL/AMDAL sesuai dengan kebutuhan perubahan dan persyaratan.",
       },
       {
         id: 3,
         title: "PENYUSUNAN DOKUMEN RKL - RPL",
+        image: "/images/services-3-3.png",
+        description:
+          "Kegiatan pemantauan dan pengelolaan lingkungan wajib dibuat oleh perusahaan sebulan sekali dan digabung dalam suatu laporan RKL-RPL setiap 3 bulan sekali untuk dikirim ke DLH setempat. Terkadang ada juga perusahaan yang ingin dibantu konsultan untuk menyusun laporan RKL-RPL tersebut.",
       },
       {
         id: 4,
         title: "SUPERVISI PREPARASI IZIN PENGELOLAAN LIMBAH B3",
+        image: "/images/services-3-4.png",
+        description:
+          "Semua kegiatan pengelolaan Limbah B3 (kecuali Reduksi Limbah B3) wajib memiliki izin pengelolaan limbah B3, antara lain kegiatan penyimpanan sementara, pengangkutan, pengumpulan, pemanfaatan, pengolahan, dan penimbunan akhir. Karena banyaknya persyaratan teknis dan administrasi, perusahaan selain bisa mengurus sendiri izinnya, juga bisa minta dibantu atau didampingi supervisor.",
       },
     ],
   },
