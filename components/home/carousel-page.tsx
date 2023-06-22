@@ -11,11 +11,9 @@ interface Props {
     position: string;
     images: string[];
   };
-  handleNext: () => void;
-  handlePrev: () => void;
 }
 
-export default function CarouselPage({ page, handleNext, handlePrev }: Props) {
+export default function CarouselPage({ page }: Props) {
   const [imageIndex, setImageIndex] = useState<number>(0);
   const imageTimeout = 3000;
 
@@ -70,35 +68,13 @@ export default function CarouselPage({ page, handleNext, handlePrev }: Props) {
           >
             Hubungi kami
           </a>
-          <Link href="/" className="bg-green px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.1] text-[1rem] lg:text-[1.25rem] hover:!text-black">
+          <Link
+            href="/"
+            className="bg-green px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.1] text-[1rem] lg:text-[1.25rem] hover:!text-black"
+          >
             Selengkapnya
           </Link>
         </div>
-      </div>
-      {/* Arrows */}
-      <div className="flex justify-between absolute top-[50%] translate-y-[-50%] left-0 right-0 lg:px-[2rem]">
-        <button
-          className="text-white font-bold text-[2rem]"
-          onClick={handlePrev}
-        >
-          <Image
-            src="/icons/chevron-left.png"
-            alt="Chevron left icon"
-            width={20}
-            height={40}
-          />
-        </button>
-        <button
-          className="text-white font-bold text-[2rem]"
-          onClick={handleNext}
-        >
-          <Image
-            src="/icons/chevron-right.png"
-            alt="Chevron right icon"
-            width={20}
-            height={40}
-          />
-        </button>
       </div>
     </div>
   );
