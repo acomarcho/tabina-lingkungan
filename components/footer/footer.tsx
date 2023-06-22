@@ -1,10 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <div className="min-w-screen bg-dark-gray">
       <div className="max-w-[1160px] p-[2rem] mx-auto">
+        {/* Columns for information */}
         <div className="flex flex-col gap-[2rem]">
+          {/* Company information */}
           <div className="flex flex-col gap-[0.5rem] items-start">
             <h2 className="font-bold text-white text-[1.25rem]">
               PT Tabina Lingkungan
@@ -22,6 +25,7 @@ export default function Footer() {
               Google Maps
             </a>
           </div>
+          {/* Contact section */}
           <div className="flex flex-col gap-[0.5rem] items-start">
             <div className="flex gap-[2rem] items-center">
               <Image
@@ -46,6 +50,36 @@ export default function Footer() {
                 <p className="text-white text-[1rem]">021-8476340 (Telepon)</p>
               </div>
             </div>
+          </div>
+          {/* Quick navigation */}
+          <div className="flex flex-col gap-[0.5rem] items-start">
+            <h2 className="text-white font-bold text-[1.25rem]">
+              Navigasi cepat
+            </h2>
+            <Link
+              href="/"
+              className="text-white transition-all hover:underline hover:pl-[0.5rem]"
+            >
+              Home
+            </Link>
+            <Link
+              href="/services"
+              className="text-white transition-all hover:underline hover:pl-[0.5rem]"
+            >
+              Layanan
+            </Link>
+            <Link
+              href="/about"
+              className="text-white transition-all hover:underline hover:pl-[0.5rem]"
+            >
+              Tentang kami
+            </Link>
+            <Link
+              href="/portfolio"
+              className="text-white transition-all hover:underline hover:pl-[0.5rem]"
+            >
+              Portofolio
+            </Link>
           </div>
         </div>
       </div>
