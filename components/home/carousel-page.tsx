@@ -62,14 +62,14 @@ export default function CarouselPage({ page, handleNext, handlePrev }: Props) {
           {page.description}
         </p>
         <div className="flex gap-[1.5rem] absolute bottom-[-1.5rem] left-[1.5rem] lg:bottom-[-2rem] lg:left-[2rem]">
-          <Link
+          <a
             href="https://api.whatsapp.com/send?phone=6282125346205"
             target="_blank"
             rel="noreferrer"
             className="bg-orange text-black px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.1] text-[1rem] lg:text-[1.25rem] hover:!text-black"
           >
             Hubungi kami
-          </Link>
+          </a>
           <Link href="/" className="bg-green px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.1] text-[1rem] lg:text-[1.25rem] hover:!text-black">
             Selengkapnya
           </Link>
