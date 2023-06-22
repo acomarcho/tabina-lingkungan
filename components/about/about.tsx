@@ -1,9 +1,11 @@
+import { AboutImage } from "./about-image";
+
 export default function About() {
   return (
-    <div className="max-w-[1160px] p-[2rem] mx-auto min-h-screen">
-      <div className="flex flex-col gap-[1rem]">
+    <div className="max-w-[1160px] mx-auto">
+      <div className="min-h-screen p-[2rem] flex flex-col gap-[1rem] lg:flex-row">
         {/* Text section */}
-        <div className="flex flex-col gap-[1rem]">
+        <div className="flex flex-col gap-[1rem] lg:w-[50%] lg:self-center">
           <h1 className="font-bold text-[2rem] underline">
             PT Tabina Lingkungan
           </h1>
@@ -33,6 +35,8 @@ export default function About() {
             dan mediasi lingkungan.
           </p>
         </div>
+        {/* Image */}
+        <AboutImage />
       </div>
     </div>
   );
