@@ -6,9 +6,9 @@ export default function Footer() {
     <div className="min-w-screen bg-dark-gray">
       <div className="max-w-[1160px] p-[2rem] mx-auto">
         {/* Columns for information */}
-        <div className="flex flex-col gap-[2rem]">
+        <div className="flex flex-col gap-[2rem] lg:flex-row lg:justify-between">
           {/* Company information */}
-          <div className="flex flex-col gap-[0.5rem] items-start">
+          <div className="flex flex-col gap-[0.5rem] items-start lg:w-[30%]">
             <h2 className="font-bold text-white text-[1.25rem]">
               PT Tabina Lingkungan
             </h2>
@@ -26,7 +26,7 @@ export default function Footer() {
             </a>
           </div>
           {/* Contact section */}
-          <div className="flex flex-col gap-[0.5rem] items-start">
+          <div className="flex flex-col gap-[0.5rem] items-start lg:w-[30%]">
             <div className="flex gap-[2rem] items-center">
               <Image
                 src="/icons/mail.png"
@@ -34,7 +34,12 @@ export default function Footer() {
                 width={20}
                 height={20}
               />
-              <p className="text-white text-[1rem]">galuhgah@gmail.com</p>
+              <a
+                href="mailto:galuhgah@gmail.com"
+                className="text-white transition-all hover:underline hover:pl-[0.5rem]"
+              >
+                galuhgah@gmail.com
+              </a>
             </div>
             <div className="flex gap-[2rem] items-center">
               <div>
@@ -46,13 +51,20 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <p className="text-white text-[1rem]">0821-2534-6205 (WA)</p>
+                <a
+                  href="https://api.whatsapp.com/send?phone=6282125346205"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white transition-all hover:underline hover:pl-[0.5rem]"
+                >
+                  0821-2534-6205 (WA)
+                </a>
                 <p className="text-white text-[1rem]">021-8476340 (Telepon)</p>
               </div>
             </div>
           </div>
           {/* Quick navigation */}
-          <div className="flex flex-col gap-[0.5rem] items-start">
+          <div className="flex flex-col gap-[0.5rem] items-start lg:w-[30%]">
             <h2 className="text-white font-bold text-[1.25rem]">
               Navigasi cepat
             </h2>
@@ -84,7 +96,9 @@ export default function Footer() {
         </div>
         {/* Copyright */}
         <div className="mt-[2rem]">
-          <p className="text-white opacity-[0.6] text-[1rem]">Copyright 1998-2023 PT Tabina Lingkungan. All rights reserved.</p>
+          <p className="text-white opacity-[0.6] text-[1rem] text-right">
+            Copyright 1998-2023 PT Tabina Lingkungan. All rights reserved.
+          </p>
         </div>
       </div>
     </div>
