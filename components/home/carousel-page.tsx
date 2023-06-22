@@ -9,6 +9,7 @@ interface Props {
     description: string;
     position: string;
     images: string[];
+    serviceID: number;
   };
 }
 
@@ -68,7 +69,7 @@ export default function CarouselPage({ page }: Props) {
             Hubungi kami
           </a>
           <Link
-            href="/"
+            href={`/services?id=${page.serviceID}`}
             className="bg-green px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.1] text-[1rem] lg:text-[1.25rem] hover:!text-black"
           >
             Selengkapnya
