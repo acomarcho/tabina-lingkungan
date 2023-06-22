@@ -1,9 +1,11 @@
 "use client";
 
 import CarouselPage from "./carousel-page";
-import Image from "next/image";
 import { Carousel } from "@mantine/carousel";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+
+import { useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 
 const pages = [
   {
@@ -45,12 +47,15 @@ function MyIconChevronLeft() {
 }
 
 export default function MyCarousel() {
+  const autoplay = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));
+
   return (
     <Carousel
       withIndicators
       loop
       nextControlIcon={<MyIconChevronRight />}
       previousControlIcon={<MyIconChevronLeft />}
+      plugins={[autoplay.current]}
       styles={{
         control: {
           border: "none",
