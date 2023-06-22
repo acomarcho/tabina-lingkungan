@@ -89,12 +89,34 @@ export default function Services() {
 
   return (
     <>
+      {/* Service banner image */}
       <div
         className="w-screen h-[280px] bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url(${services[currentService].image})`,
         }}
       />
+      {/* 1160px wrapper */}
+      <div className="max-w-[1160px] mx-auto">
+        {/* Service selector */}
+        <div className="p-[2rem] flex flex-col gap-[1rem]">
+          {services.map((service, idx) => {
+            return (
+              <button
+                key={service.id}
+                className={`${
+                  idx !== currentService
+                    ? "bg-card-gray text-black"
+                    : "bg-green text-white"
+                } p-[1rem] font-bold transition-all hover:scale-[1.05]`}
+                onClick={() => setCurrentService(idx)}
+              >
+                {service.name}
+              </button>
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 }
