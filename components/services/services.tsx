@@ -6,6 +6,8 @@ interface Content {
   id: number;
   title: string;
   subtitle?: string;
+  image?: string;
+  description?: string;
 }
 
 interface Service {
@@ -26,22 +28,34 @@ const services: Service[] = [
         title: "INSTALASI PENGOLAHAN AIR LIMBAH",
         subtitle:
           "(Kajian teknis, design & redesign, supervisi & konstruksi, operator IPAL, dan proses training)",
+        image: "/images/services-1-1.png",
+        description:
+          "TABLINK memiliki pengalaman cukup intensif di bidang kajian teknis (meliputi kualitas, kuantitas dan fluktuasi air limbah masuk, performa proses IPAL dari tahap persiapan, proses kimia, proses biologi, proses tersier, hingga pengolahan dan pengelolaan lanjut sludge IPAL), kegiatan design & redesign proses IPAL berbagai teknologi, supervisi konstruksi IPAL, training operator proses IPAL, hingga sebagai day to day operator IPAL.",
       },
       {
         id: 2,
         title: "PENGONTROL EMISI UDARA",
         subtitle:
           "(Kajian teknis, system design, cyclone, wet/dry scrubber, bag filter, VOC destroyer, dll.)",
+        image: "/images/services-1-2.png",
+        description:
+          "Di lokasi kegiatan produksi banyak dijumpai adanya alat pengontrol polusi udara yang bekerja dalam kondisi di bawah kinerja awalnya. Penyebab menurunnya kinerja alat bisa bermacam-macam, antara lain pemeliharaan alat yang buruk, alat mengalami kerusakan (lifetime berakhir) dan/atau mengalami korosi, dimensi alat menjadi terlalu kecil karena kapasitas produksi meningkat sehingga perlu dilakukan kajian teknis untuk mengetahui penyebabnya: apakah perlu diservis, diperbaiki, diganti atau ditambah unit baru dengan teknologi sama atau berbeda tergantung kebutuhan. TABLINK memiliki pengalaman untuk melakukan optimasi alat-alat pengontrol polusi udara melalui penelusuran jejak dokumen design alat, as built drawing, spesifikasi teknis, lifetime alat, rekam jejak pemeliharaan dan/atau troubleshooting langsung di lapangan.",
       },
       {
         id: 3,
         title: "LANDFILL DENGAN PENGAMAN",
         subtitle: "(Sanitary landfill dan secured landfill kelas I & II)",
+        image: "/images/services-1-3.png",
+        description:
+          "Sejumlah industri menghasilkan limbah padat B3 dan/atau non-B3 dalam jumlah besar, namun tidak lagi bisa diolah atau dimanfaatkan lebih lanjut sehingga lebih efektif menimbun limbah-limbah padat tersebut menggunakan teknologi sanitary landfill atau secured landfill kategori I atau II, sebagai upaya akhir pengelolaan yang juga memerlukan izin. TABLINK bersama tim engineering dan bagian produksi perusahaan akan bisa memilih teknologi kedap air untuk operasional terbaik, agar landfill bisa didesain dan dioperasikan secara efisien.",
       },
       {
         id: 4,
         title: "DESIGN PROSES PRODUKSI BERSIH & 3R",
         subtitle: "(Reuse, reduce, dan recycle)",
+        image: "/images/services-1-4.png",
+        description:
+          "Personil TABLINK memiliki pengalaman cukup panjang dalam mendampingi dan melakukan supervisi kegiatan produksi bersih, 3R (reduce, reuse, dan recycle) serta efisiensi energi pada saat bergabung dalam kegiatan IEPC (Industrial Efficiency and Pollution Control) dari KfW Jerman. Semua kegiatan produksi yang mengedepankan efisiensi energi dan meminimalkan munculnya limbah adalah langkah kelola lingkungan terbaik yang menjadi tren dunia. Dengan mempelajari secara mendalam diagram alir proses produksi utama, proses produksi penunjang, maupun proses-proses yang bersifat komplementari dan utilitas, dikaitkan dengan neraca massa, neraca energi dan komparasi industri sejenis yang lebih baik, bisa saja didapat peluang dan potensi untuk bisa melakukan dan menerapkan kegiatan produksi bersih.",
       },
     ],
   },
