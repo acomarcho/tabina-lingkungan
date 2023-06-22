@@ -19,6 +19,7 @@ module.exports = {
       'green': '#159641',
       'orange': '#F29217',
       'transparent': 'rgba(0, 0, 0, 0.75)',
+      'transparent-2': 'rgba(0, 0, 0, 0.3)',
     },
   },
   plugins: [],
