@@ -112,7 +112,7 @@ export default function Services() {
       {/* 1160px wrapper */}
       <div className="max-w-[1160px] mx-auto">
         {/* Service selector */}
-        <div className="p-[2rem] flex flex-col gap-[1rem] lg:grid lg:grid-cols-3">
+        <div className="p-[2rem] pb-[1rem] flex flex-col gap-[1rem] lg:grid lg:grid-cols-3">
           {services.map((service, idx) => {
             return (
               <button
@@ -129,15 +129,20 @@ export default function Services() {
             );
           })}
         </div>
-        <div className="p-[2rem] flex flex-col gap-[1rem]">
+        <div
+          className="p-[2rem] pt-[1rem] flex flex-col gap-[1rem] lg:grid"
+          style={{
+            gridTemplateColumns: `repeat(${services[currentService].contents.length}, 1fr)`,
+          }}
+        >
           {/* Services list */}
           {services[currentService].contents.map((content) => {
             return (
               <div
                 key={content.id}
-                className="bg-green-2 text-white p-[1rem] text-center flex flex-col gap-[2rem] justify-between"
+                className="bg-green-2 text-white p-[1rem] text-center flex flex-col gap-[2rem]"
               >
-                <p>{content.title}</p>
+                <p className="font-bold">{content.title}</p>
                 {content.subtitle && <p>{content.subtitle}</p>}
               </div>
             );
