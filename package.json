@@ -9,11 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@mantine/carousel": "^6.0.14",
+    "@mantine/core": "^6.0.14",
+    "@mantine/hooks": "^6.0.14",
+    "@tabler/icons-react": "^2.22.0",
     "@types/node": "20.3.1",
     "@types/react": "18.2.13",
     "@types/react-dom": "18.2.6",
-    "antd": "^5.6.2",
     "autoprefixer": "10.4.14",
+    "embla-carousel-react": "^7.1.0",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.6",
     "next": "13.4.6",
