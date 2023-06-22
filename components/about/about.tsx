@@ -1,5 +1,10 @@
 import { AboutImage } from "./about-image";
-import { IconDownload } from "@tabler/icons-react";
+import {
+  IconDownload,
+  IconTargetArrow,
+  IconBrandReact,
+  IconCertificate,
+} from "@tabler/icons-react";
 
 export default function About() {
   return (
@@ -52,7 +57,10 @@ export default function About() {
         }}
       >
         <div className="max-w-[1160px] mx-auto">
-          <p className="px-[2rem] pt-[2rem] text-[1.5rem] italic">Kenapa harus memilih kami?</p>
+          {/* Information section */}
+          <p className="px-[2rem] pt-[2rem] text-[1.5rem] italic">
+            Kenapa harus memilih kami?
+          </p>
           <div className="flex flex-col p-[2rem] gap-[1rem] lg:flex-row">
             <div className="flex flex-col gap-[1rem] lg:w-[50%]">
               <h1 className="font-bold text-[2rem] lg:text-[2.5rem]">
@@ -79,6 +87,47 @@ export default function About() {
                 </p>
                 <IconDownload size={40} />
               </a>
+            </div>
+          </div>
+          {/* Badges section */}
+          <div className="flex flex-col p-[2rem] gap-[1rem]">
+            {/* Tepat waktu */}
+            <div className="flex flex-col gap-[1rem] items-center text-center">
+              <h2 className="text-orange font-bold text-[1.5rem]">
+                Tepat Waktu
+              </h2>
+              <p>
+                Pelaksanaan proyek serta penyelesaian kajian dilakukan secara
+                cepat, efektif, dan tepat. Pekerjaan selalu efisien dan tepat
+                sesuai target pekerjaan.
+              </p>
+              <IconTargetArrow size={80} />
+            </div>
+            {/* Profesional */}
+            <div className="flex flex-col gap-[1rem] items-center text-center">
+              <h2 className="text-orange font-bold text-[1.5rem]">
+                Profesional
+              </h2>
+              <p>
+                Pekerjaan dilakukan oleh tenaga ahli profesional yang sudah
+                berprofesi puluhan tahun sehingga terjamin kualitas pekerjaan
+                yang dilakukan sesuai dengan standar keahlian profesi. Kami
+                jujur dan apa adanya dalam memberikan keterangan sesuai dengan
+                fakta lapangan.
+              </p>
+              <IconBrandReact size={80} />
+            </div>
+            {/* Bersertifikat resmi */}
+            <div className="flex flex-col gap-[1rem] items-center text-center">
+              <h2 className="text-orange font-bold text-[1.5rem]">
+                Bersertifikat Resmi yang Diakui Negara
+              </h2>
+              <p>
+                PT Tabina Lingkungan adalah perusahaan jasa konsultan
+                profesional dan bersertifikasi resmi BNSP yang diakui KLHK
+                negara dan memiliki dokumen legal yang jelas.
+              </p>
+              <IconCertificate size={80} />
             </div>
           </div>
         </div>
