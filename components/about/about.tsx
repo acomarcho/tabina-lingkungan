@@ -1,4 +1,5 @@
 import { AboutImage } from "./about-image";
+import Image from "next/image";
 import {
   IconDownload,
   IconTargetArrow,
@@ -136,6 +137,14 @@ export default function About() {
               <IconCertificate size={80} />
             </div>
           </div>
+        </div>
+      </div>
+      {/* Third section */}
+      <div className="max-w-[1160px] mx-auto">
+        <div className="p-[2rem] py-[5rem] flex flex-col items-center">
+          <Image src="/icons/logo-small.png" alt="Logo PT Tabina Lingkungan" width={164} height={84} />
+          <h3 className="font-bold text-center">PT Tabina Lingkungan</h3>
+          <h1 className="font-bold text-[2.5rem] mt-[2rem] text-center">Siap Bekerja Sama Dengan Anda</h1>
         </div>
       </div>
     </>
