@@ -2,7 +2,20 @@
 
 import { useState } from "react";
 
-const services = [
+interface Content {
+  id: number;
+  title: string;
+  subtitle?: string;
+}
+
+interface Service {
+  id: number;
+  name: string;
+  image: string;
+  contents: Content[];
+}
+
+const services: Service[] = [
   {
     id: 1,
     name: "Konsultasi & Rekayasa Teknik",
@@ -99,7 +112,7 @@ export default function Services() {
       {/* 1160px wrapper */}
       <div className="max-w-[1160px] mx-auto">
         {/* Service selector */}
-        <div className="p-[2rem] flex flex-col gap-[1rem]">
+        <div className="p-[2rem] flex flex-col gap-[1rem] lg:grid lg:grid-cols-3">
           {services.map((service, idx) => {
             return (
               <button
@@ -113,6 +126,20 @@ export default function Services() {
               >
                 {service.name}
               </button>
+            );
+          })}
+        </div>
+        <div className="p-[2rem] flex flex-col gap-[1rem]">
+          {/* Services list */}
+          {services[currentService].contents.map((content) => {
+            return (
+              <div
+                key={content.id}
+                className="bg-green-2 text-white p-[1rem] text-center flex flex-col gap-[2rem] justify-between"
+              >
+                <p>{content.title}</p>
+                {content.subtitle && <p>{content.subtitle}</p>}
+              </div>
             );
           })}
         </div>
