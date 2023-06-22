@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 interface Content {
   id: number;
@@ -143,13 +144,13 @@ export default function Services() {
             );
           })}
         </div>
+        {/* Services list */}
         <div
-          className="p-[2rem] pt-[1rem] flex flex-col gap-[1rem] lg:grid"
+          className="p-[2rem] pt-[1rem] pb-[1rem] flex flex-col gap-[1rem] lg:grid"
           style={{
             gridTemplateColumns: `repeat(${services[currentService].contents.length}, 1fr)`,
           }}
         >
-          {/* Services list */}
           {services[currentService].contents.map((content) => {
             return (
               <div
@@ -158,6 +159,33 @@ export default function Services() {
               >
                 <p className="font-bold">{content.title}</p>
                 {content.subtitle && <p>{content.subtitle}</p>}
+              </div>
+            );
+          })}
+        </div>
+        {/* Detailed service list */}
+        <div className="p-[2rem] pt-[1rem] flex flex-col gap-[1rem]">
+          {services[currentService].contents.map((content) => {
+            return (
+              <div key={content.id} className="flex flex-col gap-[1rem]">
+                {/* Title, subtitle, and image */}
+                <div className="flex flex-col gap-[0.5rem]">
+                  <h1 className="font-bold text-orange text-[2rem]">
+                    {content.title}
+                  </h1>
+                  {content.subtitle && (
+                    <p className="font-bold">{content.subtitle}</p>
+                  )}
+                  <Image
+                    src={content.image!}
+                    alt={content.title}
+                    width={525}
+                    height={266}
+                    className="w-full"
+                  />
+                </div>
+                {/* Description */}
+                <p>{content.description}</p>
               </div>
             );
           })}
