@@ -84,7 +84,7 @@ export default function Footer() {
               href="/about"
               className="text-white transition-all hover:underline hover:pl-[0.5rem]"
             >
-              Tentang kami
+              Tentang Kami
             </Link>
             <Link
               href="/portfolio"

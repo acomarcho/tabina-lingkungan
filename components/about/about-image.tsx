@@ -10,7 +10,7 @@ const images = [
 
 export function AboutImage() {
   const [currentImage, setCurrentImage] = useState(0);
-  const imageInterval = 2000;
+  const imageInterval = 3000;
 
   useEffect(() => {
     const changeImageTimeout = setTimeout(() => {
