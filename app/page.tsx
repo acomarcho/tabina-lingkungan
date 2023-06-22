@@ -1,4 +1,5 @@
 import MyCarousel from "@/components/home/carousel";
+import Footer from "@/components/footer/footer";
 
 export const metadata = {
   title: "Home",
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <>
       <MyCarousel />
+      <Footer />
     </>
   );
 }
