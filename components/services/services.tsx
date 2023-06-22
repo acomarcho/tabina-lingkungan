@@ -165,27 +165,35 @@ export default function Services() {
         </div>
         {/* Detailed service list */}
         <div className="p-[2rem] pt-[1rem] flex flex-col gap-[1rem]">
-          {services[currentService].contents.map((content) => {
+          {services[currentService].contents.map((content, idx) => {
             return (
-              <div key={content.id} className="flex flex-col gap-[1rem]">
-                {/* Title, subtitle, and image */}
-                <div className="flex flex-col gap-[0.5rem]">
+              <div className="mt-[1rem]" key={content.id}>
+                <div
+                  className={`${
+                    idx % 2 === 0 ? "lg:text-left" : "lg:text-right"
+                  }`}
+                >
                   <h1 className="font-bold text-orange text-[2rem]">
                     {content.title}
                   </h1>
                   {content.subtitle && (
-                    <p className="font-bold">{content.subtitle}</p>
+                    <h2 className="font-bold">{content.subtitle}</h2>
                   )}
+                </div>
+                <div
+                  className={`mt-[1rem] flex flex-col gap-[1rem] ${
+                    idx % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                  } lg:justify-between`}
+                >
                   <Image
                     src={content.image!}
                     alt={content.title}
                     width={525}
                     height={266}
-                    className="w-full"
+                    className="w-full lg:w-[50%]"
                   />
+                  <p className="lg:w-[50%]">{content.description}</p>
                 </div>
-                {/* Description */}
-                <p>{content.description}</p>
               </div>
             );
           })}
