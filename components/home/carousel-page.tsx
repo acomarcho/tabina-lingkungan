@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 interface Props {
@@ -61,12 +62,17 @@ export default function CarouselPage({ page, handleNext, handlePrev }: Props) {
           {page.description}
         </p>
         <div className="flex gap-[1.5rem] absolute bottom-[-1.5rem] left-[1.5rem] lg:bottom-[-2rem] lg:left-[2rem]">
-          <button className="bg-orange px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.1] text-[1rem] lg:text-[1.25rem]">
+          <a
+            href="https://api.whatsapp.com/send?phone=6282125346205"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-orange text-black px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.1] text-[1rem] lg:text-[1.25rem] hover:!text-black"
+          >
             Hubungi kami
-          </button>
-          <button className="bg-green px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.1] text-[1rem] lg:text-[1.25rem]">
+          </a>
+          <Link href="/" className="bg-green px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.1] text-[1rem] lg:text-[1.25rem] hover:!text-black">
             Selengkapnya
-          </button>
+          </Link>
         </div>
       </div>
       {/* Arrows */}
@@ -75,13 +81,23 @@ export default function CarouselPage({ page, handleNext, handlePrev }: Props) {
           className="text-white font-bold text-[2rem]"
           onClick={handlePrev}
         >
-          <Image src="/icons/chevron-left.png" alt="Chevron left icon" width={20} height={40} />
+          <Image
+            src="/icons/chevron-left.png"
+            alt="Chevron left icon"
+            width={20}
+            height={40}
+          />
         </button>
         <button
           className="text-white font-bold text-[2rem]"
           onClick={handleNext}
         >
-          <Image src="/icons/chevron-right.png" alt="Chevron right icon" width={20} height={40} />
+          <Image
+            src="/icons/chevron-right.png"
+            alt="Chevron right icon"
+            width={20}
+            height={40}
+          />
         </button>
       </div>
     </div>

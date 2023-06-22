@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import CarouselPage from "./carousel-page";
 import { Carousel } from "antd";
 import { CarouselRef } from "antd/es/carousel";
