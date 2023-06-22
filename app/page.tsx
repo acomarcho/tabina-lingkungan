@@ -6,7 +6,7 @@ export const metadata = {
   description: "Homepage of PT Tabina Lingkungan",
 };
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <MyCarousel />
