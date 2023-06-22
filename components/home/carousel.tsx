@@ -15,6 +15,7 @@ const pages = [
       "/images/carousel-1-2.png",
       "/images/carousel-1-3.png",
     ],
+    serviceID: 0,
   },
   {
     title: "AUDIT LINGKUNGAN HIDUP",
@@ -26,6 +27,7 @@ const pages = [
       "/images/carousel-2-2.png",
       "/images/carousel-2-3.png",
     ],
+    serviceID: 1,
   },
   {
     title: "PREPARASI, PENYUSUNAN & REVISI DOKUMEN LINGKUNGAN",
@@ -37,6 +39,7 @@ const pages = [
       "/images/carousel-3-2.png",
       "/images/carousel-3-3.png",
     ],
+    serviceID: 2,
   },
 ];
 

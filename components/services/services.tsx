@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 
 interface Content {
@@ -140,7 +141,14 @@ const services: Service[] = [
 ];
 
 export default function Services() {
-  const [currentService, setCurrentService] = useState(0);
+  const searchParams = useSearchParams();
+  const serviceID = searchParams.get("id");
+
+  const [currentService, setCurrentService] = useState(
+    !serviceID || parseInt(serviceID) < 0 || parseInt(serviceID) > 2
+      ? 0
+      : parseInt(serviceID)
+  );
 
   return (
     <>
