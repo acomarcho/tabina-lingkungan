@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 const services = [
   {
     id: 1,
@@ -83,5 +85,16 @@ const services = [
 ];
 
 export default function Services() {
-  return <h1>Services component</h1>;
+  const [currentService, setCurrentService] = useState(0);
+
+  return (
+    <>
+      <div
+        className="w-screen h-[280px] bg-cover bg-no-repeat"
+        style={{
+          backgroundImage: `url(${services[currentService].image})`,
+        }}
+      />
+    </>
+  );
 }
