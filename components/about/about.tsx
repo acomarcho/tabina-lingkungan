@@ -52,9 +52,10 @@ export default function About() {
         }}
       >
         <div className="max-w-[1160px] mx-auto">
-          <div className="flex flex-col p-[2rem] gap-[1rem]">
-            <div className="flex flex-col gap-[1rem]">
-              <h1 className="font-bold text-[2rem]">
+          <p className="px-[2rem] pt-[2rem] text-[1.5rem] italic">Kenapa harus memilih kami?</p>
+          <div className="flex flex-col p-[2rem] gap-[1rem] lg:flex-row">
+            <div className="flex flex-col gap-[1rem] lg:w-[50%]">
+              <h1 className="font-bold text-[2rem] lg:text-[2.5rem]">
                 KONSULTAN TERBAIK PROFESIONAL DIAKUI KLHK
               </h1>
               <p>
@@ -66,9 +67,9 @@ export default function About() {
                 serta pengawasan dan pelatihan.
               </p>
             </div>
-            <div>
+            <div className="lg:w-[50%] lg:flex lg:justify-end lg:items-start">
               <a
-                className="border-2 border-black p-[1rem] flex flex-col gap-[1rem] items-center transition-all hover:bg-black hover:text-white"
+                className="border-2 border-black p-[1rem] flex flex-col gap-[1rem] items-center transition-all hover:bg-black hover:text-white lg:max-w-[20rem]"
                 href="https://www.google.com"
                 target="_blank"
                 rel="noreferrer"
