@@ -82,6 +82,10 @@ export default function Footer() {
             </Link>
           </div>
         </div>
+        {/* Copyright */}
+        <div className="mt-[2rem]">
+          <p className="text-white opacity-[0.6] text-[1rem]">Copyright 1998-2023 PT Tabina Lingkungan. All rights reserved.</p>
+        </div>
       </div>
     </div>
   );
