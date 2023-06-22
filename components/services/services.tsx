@@ -68,22 +68,37 @@ const services: Service[] = [
       {
         id: 1,
         title: "AUDIT WAJIB BERKALA RISIIKO TINGGI",
+        image: "/images/services-2-1.png",
+        description:
+          "TABLINK memiliki perhatian tinggi pada kegiatan audit wajib berkala risiko tinggi, karena sifat bahaya kegiatan dan/atau usaha berisiko tinggi memang bisa mengancam lingkungan hidup dan terutama masyarakat dalam radius yang luas. Pelibatan ahli berbagai bidang ilmu pengetahuan dan teknologi (IPTEK) sesuai kebutuhan mutlak diperlukan agar bisa diperoleh hasil audit dengan kualitas terbaik.",
       },
       {
         id: 2,
         title: "AUDIT WAJIB/GAKKUM (MANDATORY)",
+        image: "/images/services-2-2.png",
+        description:
+          "Pada saat tertentu, karena suatu hal, negara (dalam hal ini KLHK) mewajibkan suatu kegiatan dan/atau usaha untuk melakukan audit wajib (mandatory), misal dalam rangka penegakan hukum atau perselisihan lingkungan hidup. TABLINK dengan didukung berbagai keahlian IPTEK independen siap untuk melaksanaan tugas itu.",
       },
       {
         id: 3,
         title: "AUDIT SUKARELA & INTERNAL",
+        image: "/images/services-2-3.png",
+        description:
+          "Sesuai namanya, kegiatan audit ini bersifat sukarela atau internal. Biasanya karena kebutuhan permintaan konsumen atau rekanan bisnis, persyaratan market luar, untuk keperluan pengawasan internal grup perusahaan, untuk evaluasi rutin, dll.",
       },
       {
         id: 4,
         title: "SUPERVISI PREPARASI AUDIT (PREAUDIT)",
+        image: "/images/services-2-4.png",
+        description:
+          "Kegiatan preaudit biasanya dijadwalkan untuk keperluan persiapan audit manajemen lingkungan yang sesungguhnya akan diselenggarakan dalam waktu dekat. Tujuannya agar tidak terlalu banyak temuan audit, karena berbagai aktivitas produksi yang masih salah secara aturan perundang-undangan lingkungan hidup dan/atau persyaratan lain bisa segera dikoreksi sebelum hari-H.",
       },
       {
         id: 5,
         title: "SUPERVISI PREPARASI PROPER",
+        image: "/images/services-2-5.png",
+        description:
+          "Aktivitas penilaian peringkat PROPER sesungguhnya mirip kegiatan audit. Sejumlah industri memerlukan jasa pendampingan atau supervisor agar berbagai faktor yang menjadi penilaian PROPER bisa dinilai dan dievaluasi terlebih dulu secara internal agar bisa segera diperbaiki.",
       },
     ],
   },
