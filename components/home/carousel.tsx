@@ -1,7 +1,6 @@
 "use client";
 
 import CarouselPage from "./carousel-page";
-import Image from "next/image";
 import { Carousel } from "@mantine/carousel";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 
