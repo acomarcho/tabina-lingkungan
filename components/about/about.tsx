@@ -90,43 +90,49 @@ export default function About() {
             </div>
           </div>
           {/* Badges section */}
-          <div className="flex flex-col p-[2rem] gap-[1rem]">
+          <div className="flex flex-col p-[2rem] gap-[1rem] lg:grid lg:grid-cols-3">
             {/* Tepat waktu */}
-            <div className="flex flex-col gap-[1rem] items-center text-center">
-              <h2 className="text-orange font-bold text-[1.5rem]">
-                Tepat Waktu
-              </h2>
-              <p>
-                Pelaksanaan proyek serta penyelesaian kajian dilakukan secara
-                cepat, efektif, dan tepat. Pekerjaan selalu efisien dan tepat
-                sesuai target pekerjaan.
-              </p>
+            <div className="flex px-[1rem] flex-col gap-[1rem] items-center justify-between text-center">
+              <div className="flex flex-col gap-[1rem]">
+                <h2 className="text-orange font-bold text-[1.5rem]">
+                  Tepat Waktu
+                </h2>
+                <p>
+                  Pelaksanaan proyek serta penyelesaian kajian dilakukan secara
+                  cepat, efektif, dan tepat. Pekerjaan selalu efisien dan tepat
+                  sesuai target pekerjaan.
+                </p>
+              </div>
               <IconTargetArrow size={80} />
             </div>
             {/* Profesional */}
-            <div className="flex flex-col gap-[1rem] items-center text-center">
-              <h2 className="text-orange font-bold text-[1.5rem]">
-                Profesional
-              </h2>
-              <p>
-                Pekerjaan dilakukan oleh tenaga ahli profesional yang sudah
-                berprofesi puluhan tahun sehingga terjamin kualitas pekerjaan
-                yang dilakukan sesuai dengan standar keahlian profesi. Kami
-                jujur dan apa adanya dalam memberikan keterangan sesuai dengan
-                fakta lapangan.
-              </p>
+            <div className="flex lg:px-[1rem] flex-col gap-[1rem] items-center justify-between text-center lg:border-l-2 lg:border-r-2 lg:border-black">
+              <div className="flex flex-col gap-[1rem]">
+                <h2 className="text-orange font-bold text-[1.5rem]">
+                  Profesional
+                </h2>
+                <p>
+                  Pekerjaan dilakukan oleh tenaga ahli profesional yang sudah
+                  berprofesi puluhan tahun sehingga terjamin kualitas pekerjaan
+                  yang dilakukan sesuai dengan standar keahlian profesi. Kami
+                  jujur dan apa adanya dalam memberikan keterangan sesuai dengan
+                  fakta lapangan.
+                </p>
+              </div>
               <IconBrandReact size={80} />
             </div>
             {/* Bersertifikat resmi */}
-            <div className="flex flex-col gap-[1rem] items-center text-center">
-              <h2 className="text-orange font-bold text-[1.5rem]">
-                Bersertifikat Resmi yang Diakui Negara
-              </h2>
-              <p>
-                PT Tabina Lingkungan adalah perusahaan jasa konsultan
-                profesional dan bersertifikasi resmi BNSP yang diakui KLHK
-                negara dan memiliki dokumen legal yang jelas.
-              </p>
+            <div className="flex lg:px-[1rem] flex-col gap-[1rem] items-center justify-between text-center">
+              <div className="flex flex-col gap-[1rem]">
+                <h2 className="text-orange font-bold text-[1.5rem]">
+                  Bersertifikat Resmi yang Diakui Negara
+                </h2>
+                <p>
+                  PT Tabina Lingkungan adalah perusahaan jasa konsultan
+                  profesional dan bersertifikasi resmi BNSP yang diakui KLHK
+                  negara dan memiliki dokumen legal yang jelas.
+                </p>
+              </div>
               <IconCertificate size={80} />
             </div>
           </div>
