@@ -37,12 +37,14 @@ export default function Navbar({ name }: NavbarProps) {
       {/* Mobile navbar */}
       <div className="p-[2rem] fixed top-0 left-0 right-0 z-[2] bg-green-2">
         <div className="flex justify-between items-center">
-          <Image
-            src="/icons/logo-nav.png"
-            alt="TAB-LINK logo"
-            width={78}
-            height={40}
-          />
+          <Link href="/">
+            <Image
+              src="/icons/logo-nav.png"
+              alt="TAB-LINK logo"
+              width={78}
+              height={40}
+            />
+          </Link>
           <button className="pointer" onClick={open}>
             <IconMenu2 size={40} />
           </button>
