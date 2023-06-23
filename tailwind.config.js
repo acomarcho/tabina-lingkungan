@@ -20,6 +20,7 @@ module.exports = {
       'green': '#159641',
       'green-2': '#61b37c',
       'orange': '#F29217',
+      'orange-2': '#FFBE6B',
       'transparent': 'rgba(0, 0, 0, 0.75)',
       'transparent-2': 'rgba(0, 0, 0, 0.3)',
       'card-gray': 'rgba(218, 218, 218, 0.30)',
