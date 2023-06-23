@@ -28,7 +28,7 @@ export function AboutImage() {
 
   return (
     <div
-      className="transition-all hidden lg:block lg:w-[50%] lg:bg-cover lg:bg-no-repeat"
+      className="transition-all hidden lg:block lg:w-[50%] lg:bg-cover lg:bg-no-repeat lg:bg-center"
       style={{
         backgroundImage: `url(${images[currentImage]})`,
       }}

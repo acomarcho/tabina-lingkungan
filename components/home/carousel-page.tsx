@@ -44,7 +44,7 @@ export default function CarouselPage({ page }: Props) {
 
   return (
     <div
-      className="h-[calc(100vh-104px)] mt-[104px] transition-all bg-no-repeat bg-cover relative"
+      className="h-[calc(100vh-104px)] mt-[104px] transition-all bg-no-repeat bg-cover bg-center relative"
       style={{
         backgroundImage: `url(${page.images[imageIndex]})`,
       }}

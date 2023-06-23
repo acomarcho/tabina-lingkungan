@@ -10,7 +10,7 @@ interface Props {
 export default function CarouselPage({ page }: Props) {
   return (
     <div
-      className="h-[calc(100vh-104px)] mt-[104px] transition-all bg-no-repeat bg-cover"
+      className="h-[calc(100vh-104px)] mt-[104px] transition-all bg-no-repeat bg-cover bg-center"
       style={{
         backgroundImage: `url(${page.image})`,
       }}
