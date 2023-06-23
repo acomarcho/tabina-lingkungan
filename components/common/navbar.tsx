@@ -35,7 +35,7 @@ export default function Navbar({ name }: NavbarProps) {
   return (
     <>
       {/* Mobile navbar */}
-      <div className="p-[2rem] fixed top-0 left-0 right-0 z-[2] bg-green-2">
+      <div className="p-[2rem] fixed top-0 left-0 right-0 z-[2] bg-green-2 lg:hidden">
         <div className="flex justify-between items-center">
           <Link href="/">
             <Image
@@ -46,7 +46,7 @@ export default function Navbar({ name }: NavbarProps) {
             />
           </Link>
           <button className="pointer" onClick={open}>
-            <IconMenu2 size={40} />
+            <IconMenu2 size={40} color={"#FFFFFF"} />
           </button>
         </div>
         <Drawer
@@ -81,6 +81,41 @@ export default function Navbar({ name }: NavbarProps) {
           <hr className="mt-[2rem]" />
           <p className="mt-[2rem]">Senin - Jumat 08.00 - 17.00</p>
         </Drawer>
+      </div>
+      {/* Desktop navbar */}
+      <div className="hidden lg:block fixed top-0 left-0 right-0 bg-green-2 z-[999]">
+        <div className="max-w-[1160px] p-[2rem] mx-auto">
+          <div className="flex justify-between items-center">
+            <div className="flex gap-[2rem] items-center">
+              <Link href="/">
+                <Image
+                  src="/icons/logo-nav.png"
+                  alt="TAB-LINK logo"
+                  width={78}
+                  height={40}
+                />
+              </Link>
+              {links.map((link) => {
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.path}
+                    className={`${
+                      link.name === name
+                        ? "text-orange-2 font-bold underline"
+                        : "text-white"
+                    } transition-all hover:translate-x-[0.25rem] hover:underline`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </div>
+            <div>
+              <p className="text-white">Senin - Jumat 08.00 - 17.00</p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
