@@ -50,30 +50,32 @@ export default function CarouselPage({ page }: Props) {
       }}
     >
       {/* Information banner */}
-      <div
-        className={`bg-transparent w-[100%] lg:max-w-[480px] p-[2rem] relative ${responsiveLayout}`}
-      >
-        <h1 className="font-bold text-white text-[2rem] lg:text-[2.5rem]">
-          {page.title}
-        </h1>
-        <p className="text-white text-[1rem] lg:text-[1.25rem]">
-          {page.description}
-        </p>
-        <div className="flex gap-[1.5rem] absolute bottom-[-1.5rem] left-[1.5rem] lg:bottom-[-2rem] lg:left-[2rem]">
-          <a
-            href="https://api.whatsapp.com/send?phone=6282125346205"
-            target="_blank"
-            rel="noreferrer"
-            className="bg-orange text-black px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.1] text-[1rem] lg:text-[1.25rem] hover:!text-black"
-          >
-            Hubungi kami
-          </a>
-          <Link
-            href={`/services?id=${page.serviceID}`}
-            className="bg-green px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.1] text-[1rem] lg:text-[1.25rem] hover:!text-black"
-          >
-            Selengkapnya
-          </Link>
+      <div className="p-[0.5rem] lg:p-[0rem]">
+        <div
+          className={`bg-transparent w-[100%] lg:max-w-[480px] p-[2rem] relative ${responsiveLayout}`}
+        >
+          <h1 className="font-bold text-white text-[2rem] lg:text-[2.5rem]">
+            {page.title}
+          </h1>
+          <p className="text-white text-[1rem] lg:text-[1.25rem]">
+            {page.description}
+          </p>
+          <div className="flex gap-[0.5rem] absolute bottom-[-1.5rem] left-[1.5rem] lg:bottom-[-2rem] lg:left-[2rem] md:gap-[1.5rem]">
+            <a
+              href="https://api.whatsapp.com/send?phone=6282125346205"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-orange text-black px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.02] text-[0.9rem] md:text-[1rem] lg:text-[1.25rem] hover:!text-black"
+            >
+              Hubungi kami
+            </a>
+            <Link
+              href={`/services?id=${page.serviceID}`}
+              className="bg-green px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.02] text-[0.9rem] md:text-[1rem] lg:text-[1.25rem] hover:!text-black"
+            >
+              Selengkapnya
+            </Link>
+          </div>
         </div>
       </div>
     </div>
