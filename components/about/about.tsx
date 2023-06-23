@@ -12,7 +12,7 @@ export default function About() {
     <>
       {/* First section */}
       <div className="max-w-[1160px] mx-auto">
-        <div className="min-h-screen p-[2rem] flex flex-col gap-[1rem] lg:flex-row">
+        <div className="min-h-[calc(100vh-104px)] mt-[104px] p-[2rem] flex flex-col gap-[1rem] lg:flex-row">
           {/* Text section */}
           <div className="flex flex-col gap-[1rem] lg:w-[50%] lg:self-center">
             <h1 className="font-bold text-[2rem] underline">
