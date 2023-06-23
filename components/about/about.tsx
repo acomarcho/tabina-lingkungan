@@ -1,3 +1,5 @@
+"use client";
+
 import { AboutImage } from "./about-image";
 import Image from "next/image";
 import {
@@ -7,14 +9,27 @@ import {
   IconCertificate,
 } from "@tabler/icons-react";
 
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function About() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <>
       {/* First section */}
       <div className="max-w-[1160px] mx-auto">
         <div className="min-h-[calc(100vh-104px)] mt-[104px] p-[2rem] flex flex-col gap-[1rem] lg:flex-row">
           {/* Text section */}
-          <div className="flex flex-col gap-[1rem] lg:w-[50%] lg:self-center">
+          <div
+            className="flex flex-col gap-[1rem] lg:w-[50%] lg:self-center"
+            data-aos="zoom-in"
+          >
             <h1 className="font-bold text-[2rem] underline">
               PT Tabina Lingkungan
             </h1>
@@ -59,10 +74,16 @@ export default function About() {
       >
         <div className="max-w-[1160px] mx-auto">
           {/* Information section */}
-          <p className="px-[2rem] pt-[2rem] text-[1.5rem] italic">
+          <p
+            className="px-[2rem] pt-[2rem] text-[1.5rem] italic"
+            data-aos="zoom-in"
+          >
             Kenapa harus memilih kami?
           </p>
-          <div className="flex flex-col p-[2rem] gap-[1rem] lg:flex-row">
+          <div
+            className="flex flex-col p-[2rem] gap-[1rem] lg:flex-row"
+            data-aos="zoom-in"
+          >
             <div className="flex flex-col gap-[1rem] lg:w-[50%]">
               <h1 className="font-bold text-[2rem] lg:text-[2.5rem]">
                 KONSULTAN TERBAIK PROFESIONAL DIAKUI KLHK
@@ -76,7 +97,10 @@ export default function About() {
                 serta pengawasan dan pelatihan.
               </p>
             </div>
-            <div className="lg:w-[50%] lg:flex lg:justify-end lg:items-start">
+            <div
+              className="lg:w-[50%] lg:flex lg:justify-end lg:items-start"
+              data-aos="zoom-in"
+            >
               <a
                 className="border-2 border-black p-[1rem] flex flex-col gap-[1rem] items-center transition-all hover:bg-black hover:text-white lg:max-w-[20rem]"
                 href="https://www.google.com"
@@ -93,7 +117,10 @@ export default function About() {
           {/* Badges section */}
           <div className="flex flex-col p-[2rem] gap-[1rem] lg:grid lg:grid-cols-3">
             {/* Tepat waktu */}
-            <div className="flex px-[1rem] flex-col gap-[1rem] items-center justify-between text-center">
+            <div
+              className="flex px-[1rem] flex-col gap-[1rem] items-center justify-between text-center"
+              data-aos="zoom-in"
+            >
               <div className="flex flex-col gap-[1rem]">
                 <h2 className="text-orange font-bold text-[1.5rem]">
                   Tepat Waktu
@@ -107,7 +134,10 @@ export default function About() {
               <IconTargetArrow size={80} />
             </div>
             {/* Profesional */}
-            <div className="flex lg:px-[1rem] flex-col gap-[1rem] items-center justify-between text-center lg:border-l-2 lg:border-r-2 lg:border-black">
+            <div
+              className="flex lg:px-[1rem] flex-col gap-[1rem] items-center justify-between text-center lg:border-l-2 lg:border-r-2 lg:border-black"
+              data-aos="zoom-in"
+            >
               <div className="flex flex-col gap-[1rem]">
                 <h2 className="text-orange font-bold text-[1.5rem]">
                   Profesional
@@ -123,7 +153,10 @@ export default function About() {
               <IconBrandReact size={80} />
             </div>
             {/* Bersertifikat resmi */}
-            <div className="flex lg:px-[1rem] flex-col gap-[1rem] items-center justify-between text-center">
+            <div
+              className="flex lg:px-[1rem] flex-col gap-[1rem] items-center justify-between text-center"
+              data-aos="zoom-in"
+            >
               <div className="flex flex-col gap-[1rem]">
                 <h2 className="text-orange font-bold text-[1.5rem]">
                   Bersertifikat Resmi yang Diakui Negara
@@ -141,10 +174,25 @@ export default function About() {
       </div>
       {/* Third section */}
       <div className="max-w-[1160px] mx-auto">
-        <div className="p-[2rem] py-[5rem] flex flex-col items-center">
-          <Image src="/icons/logo-small.png" alt="Logo PT Tabina Lingkungan" width={164} height={84} />
-          <h3 className="font-bold text-center">PT Tabina Lingkungan</h3>
-          <h1 className="font-bold text-[2.5rem] mt-[2rem] text-center">Siap Bekerja Sama dengan Anda</h1>
+        <div
+          className="p-[2rem] py-[5rem] flex flex-col items-center"
+          data-aos="zoom-in"
+        >
+          <Image
+            src="/icons/logo-small.png"
+            alt="Logo PT Tabina Lingkungan"
+            width={164}
+            height={84}
+          />
+          <h3 className="font-bold text-center" data-aos="zoom-in">
+            PT Tabina Lingkungan
+          </h3>
+          <h1
+            className="font-bold text-[2.5rem] mt-[2rem] text-center"
+            data-aos="zoom-in"
+          >
+            Siap Bekerja Sama dengan Anda
+          </h1>
         </div>
       </div>
     </>
