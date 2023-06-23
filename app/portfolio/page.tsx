@@ -1,6 +1,7 @@
 import Navbar from "@/components/common/navbar";
 import MyCarousel from "@/components/portfolio/carousel";
 import Footer from "@/components/footer/footer";
+import ScrollUp from "@/components/common/scroll-to-top";
 
 export const metadata = {
   title: "Portfolio",
@@ -10,6 +11,7 @@ export const metadata = {
 export default function PortfolioPage() {
   return (
     <>
+      <ScrollUp />
       <Navbar name="Portofolio" />
       <MyCarousel />
       <Footer />

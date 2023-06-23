@@ -1,6 +1,7 @@
 import Navbar from "@/components/common/navbar";
 import About from "@/components/about/about";
 import Footer from "@/components/footer/footer";
+import ScrollUp from "@/components/common/scroll-to-top";
 
 export const metadata = {
   title: "About",
@@ -10,6 +11,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
+      <ScrollUp />
       <Navbar name="Tentang Kami" />
       <About />
       <Footer />
