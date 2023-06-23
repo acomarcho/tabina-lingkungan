@@ -164,7 +164,7 @@ export default function Services() {
     <>
       {/* Service banner image */}
       <div
-        className="mt-[104px] min-w-screen h-[280px] bg-cover bg-no-repeat transition-all"
+        className="mt-[104px] min-w-screen h-[280px] bg-cover bg-no-repeat bg-center transition-all"
         style={{
           backgroundImage: `url(${services[currentService].image})`,
         }}
