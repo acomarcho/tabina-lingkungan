@@ -183,7 +183,6 @@ export default function Services() {
                     : "bg-green text-white"
                 } p-[1rem] font-bold transition-all hover:scale-[1.05]`}
                 onClick={() => setCurrentService(idx)}
-                data-aos="zoom-in"
               >
                 {service.name}
               </button>
