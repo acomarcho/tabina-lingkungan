@@ -68,7 +68,7 @@ const services: Service[] = [
     contents: [
       {
         id: 1,
-        title: "AUDIT WAJIB BERKALA RISIIKO TINGGI",
+        title: "AUDIT WAJIB BERKALA RISIKO TINGGI",
         image: "/images/services-2-1.png",
         description:
           "TABLINK memiliki perhatian tinggi pada kegiatan audit wajib berkala risiko tinggi, karena sifat bahaya kegiatan dan/atau usaha berisiko tinggi memang bisa mengancam lingkungan hidup dan terutama masyarakat dalam radius yang luas. Pelibatan ahli berbagai bidang ilmu pengetahuan dan teknologi (IPTEK) sesuai kebutuhan mutlak diperlukan agar bisa diperoleh hasil audit dengan kualitas terbaik.",
