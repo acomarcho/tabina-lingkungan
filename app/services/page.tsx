@@ -1,6 +1,7 @@
 import Navbar from "@/components/common/navbar";
 import Services from "@/components/services/services";
 import Footer from "@/components/footer/footer";
+import ScrollUp from "@/components/common/scroll-to-top";
 
 export const metadata = {
   title: "Services",
@@ -10,6 +11,7 @@ export const metadata = {
 export default function ServicesPage() {
   return (
     <>
+      <ScrollUp />
       <Navbar name="Layanan" />
       <Services />
       <Footer />
