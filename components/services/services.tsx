@@ -4,6 +4,10 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 interface Content {
   id: number;
   title: string;
@@ -141,6 +145,12 @@ const services: Service[] = [
 ];
 
 export default function Services() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   const searchParams = useSearchParams();
   const serviceID = searchParams.get("id");
 
@@ -154,7 +164,7 @@ export default function Services() {
     <>
       {/* Service banner image */}
       <div
-        className="mt-[104px] min-w-screen h-[280px] bg-cover bg-no-repeat"
+        className="mt-[104px] min-w-screen h-[280px] bg-cover bg-no-repeat transition-all"
         style={{
           backgroundImage: `url(${services[currentService].image})`,
         }}
@@ -173,6 +183,7 @@ export default function Services() {
                     : "bg-green text-white"
                 } p-[1rem] font-bold transition-all hover:scale-[1.05]`}
                 onClick={() => setCurrentService(idx)}
+                data-aos="zoom-in"
               >
                 {service.name}
               </button>
@@ -185,6 +196,7 @@ export default function Services() {
           style={{
             gridTemplateColumns: `repeat(${services[currentService].contents.length}, 1fr)`,
           }}
+          data-aos="zoom-in"
         >
           {services[currentService].contents.map((content) => {
             return (
@@ -202,7 +214,7 @@ export default function Services() {
         <div className="p-[2rem] pt-[1rem] flex flex-col gap-[1rem]">
           {services[currentService].contents.map((content, idx) => {
             return (
-              <div className="mt-[1rem]" key={content.id}>
+              <div className="mt-[1rem]" key={content.id} data-aos="zoom-in">
                 <div
                   className={`${
                     idx % 2 === 0 ? "lg:text-left" : "lg:text-right"
