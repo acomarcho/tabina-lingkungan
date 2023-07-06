@@ -50,7 +50,7 @@ const languages = [
   },
   {
     value: "id",
-    label: "🇮🇩 Indonesian",
+    label: "🇮🇩 Bahasa Indonesia",
   },
 ];
 
