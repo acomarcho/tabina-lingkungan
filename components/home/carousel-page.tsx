@@ -6,7 +6,7 @@ import { useLanguage, Language } from "@/hooks/use-language";
 
 interface Props {
   page: {
-    title: string;
+    title: Language;
     description: Language;
     position: string;
     images: string[];
@@ -17,7 +17,7 @@ interface Props {
 export default function CarouselPage({ page }: Props) {
   const [imageIndex, setImageIndex] = useState<number>(0);
   const imageTimeout = 3000;
-  const [language, setLanguage] = useLanguage();
+  const [language, _] = useLanguage();
 
   useEffect(() => {
     const changeImageTimeout = setTimeout(() => {
@@ -57,7 +57,7 @@ export default function CarouselPage({ page }: Props) {
           className={`bg-transparent w-[100%] lg:max-w-[480px] p-[2rem] relative ${responsiveLayout}`}
         >
           <h1 className="font-bold text-white text-[2rem] lg:text-[2.5rem]">
-            {page.title}
+            {page.title[language!]}
           </h1>
           {language}
           <p className="text-white text-[1rem] lg:text-[1.25rem]">
