@@ -13,12 +13,16 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { useLanguage } from "@/hooks/use-language";
+
 export default function About() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
   }, []);
+
+  const [language, _] = useLanguage();
 
   return (
     <>
@@ -34,30 +38,21 @@ export default function About() {
               PT Tabina Lingkungan
             </h1>
             <p>
-              Didirikan pada tahun 1996, PT Tabina Lingkungan (TAB-LINK)
-              berkonsentrasi di kegiatan usaha bidang konsultasi teknologi dan
-              pengelolaan berbagai jenis limbah, khususnya di bidang design dan
-              penyempurnaan sistem pengolahan air limbah, pengoperasian
-              instalasi air limbah (IPAL), simulasi dan pemodelan sistem, serta
-              pelatihan. TAB-LINK memiliki pelayanan komprehensif untuk
-              melakukan identifikasi masalah, analisis proses dan pemroses, dan
-              optimasi serta desain ulang sistem pengolahan air limbah yang ada.
-              Dalam kegiatan konsultasi tersebut, TAB-LINK didukung oleh
-              berbagai keahlian, antara lain bidang teknik kimia, mikrobiologi,
-              manajemen, serta simulasi dan modeling pengolahan air limbah.
-              Kegiatan simulasi dan modeling tersebut menggunakan berbagai
-              perangkat lunak terbaik yang didedikasikan untuk tujuan
-              efektivitas dan efisiensi kerja.
+              {language === "id"
+                ? `Didirikan pada tahun 1996, PT Tabina Lingkungan (TAB-LINK) berkonsentrasi kegiatan usaha di bidang konsultasi teknologi dan pengelolaan berbagai jenis limbah. Khususnya di bidang desain dan penyempurnaan sistem pengolahan air limbah dan pengoperasian instalasi air limbah (IPAL)
+              `
+                : `Founded in 1996, PT Tabina Lingkungan (TAB-LINK) concentrates business activites in the field of technology consulting and management of various types of waste, particularly in the field of design and improvement of waste water treatment systems and operations of waste water installation (WWTP).`}
             </p>
             <p>
-              Memperhatikan berbagai permasalahan lingkungan kehidupan nyata
-              yang terjadi saat ini dan tantangan yang harus dihadapi pada
-              tataran implementasi dan didukung dengan kemampuan sumber daya
-              manusia (SDM), kami, PT Tabina Lingkungan, mendedikasikan diri
-              untuk kegiatan usaha di berbagai bidang, antara lain bidang
-              konsultasi dan rekayasa teknik, audit lingkungan hidup, preparasi,
-              penyusunan, serta revisi dokumen lingkungan, proses produksi ramah
-              lingkungan, dan mediasi lingkungan.
+              {language === "id"
+                ? `Dalam kegiatan konsultasi tersebut, TAB-LINK didukung oleh berbagai keahlian, antara lain bidang teknik kimia, mikrobiologi, manajemen, serta simulasi dan modeling pengolahan air limbah. Kegiatan simulasi dan modeling tersebut menggunakan berbagai perangkat lunak terbaik yang didedikasikan untuk tujuan efektivitas dan efisiensi kerja.
+              `
+                : `TAB-LINK is supported in this consulting activity by various expertise, such as chemical engineering, microbiology, management, as well as simulation and modeling of waste water treatment. The simulation and modeling activities use the best software dedicated to effectiveness and efficiency of work.`}
+            </p>
+            <p>
+              {language === "id"
+                ? `PT Tabina Lingkungan mendedikasikan diri untuk kegiatan usaha di bidang antara lain konsultasi dan rekayasa teknik, audit lingkungan hidup, preparasi, penyusunan, dan revisi dokumen lingkungan, proses produksi ramah lingkungan, mediasi lingkungan, dan lain-lain.`
+                : `PT Tabina Lingkungan dedicates itself to business activities in the field of engineering consulting & engineering, environmental audit, preparation, compilation, and revision of environmental documents, environmentally friendly production process, environmental mediation, et cetera.`}
             </p>
           </div>
           {/* Image */}
