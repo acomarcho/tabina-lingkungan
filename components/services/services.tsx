@@ -8,9 +8,11 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { useLanguage, Language } from "@/hooks/use-language";
+
 interface Content {
   id: number;
-  title: string;
+  title: Language;
   subtitle?: string;
   image?: string;
   description?: string;
@@ -18,7 +20,7 @@ interface Content {
 
 interface Service {
   id: number;
-  name: string;
+  name: Language;
   image: string;
   contents: Content[];
 }
@@ -26,12 +28,18 @@ interface Service {
 const services: Service[] = [
   {
     id: 1,
-    name: "Konsultasi & Rekayasa Teknik",
+    name: {
+      en: "Consulting & Engineering",
+      id: "Konsultasi & Rekayasa Teknik",
+    },
     image: "/images/services-1.png",
     contents: [
       {
         id: 1,
-        title: "INSTALASI PENGOLAHAN AIR LIMBAH",
+        title: {
+          en: "INSTALLATION OF WASTEWATER TREATMENT",
+          id: "INSTALASI PENGOLAHAN AIR LIMBAH",
+        },
         subtitle:
           "(Kajian teknis, design & redesign, supervisi & konstruksi, operator IPAL, dan proses training)",
         image: "/images/services-1-1.png",
@@ -40,7 +48,10 @@ const services: Service[] = [
       },
       {
         id: 2,
-        title: "PENGONTROL EMISI UDARA",
+        title: {
+          en: "AIR EMISSION CONTROLLER",
+          id: "PENGONTROL EMISI UDARA",
+        },
         subtitle:
           "(Kajian teknis, system design, cyclone, wet/dry scrubber, bag filter, VOC destroyer, dll.)",
         image: "/images/services-1-2.png",
@@ -49,7 +60,10 @@ const services: Service[] = [
       },
       {
         id: 3,
-        title: "LANDFILL DENGAN PENGAMAN",
+        title: {
+          en: "LANDFILL WITH SAFETY",
+          id: "LANDFILL DENGAN PENGAMAN",
+        },
         subtitle: "(Sanitary landfill dan secured landfill kelas I & II)",
         image: "/images/services-1-3.png",
         description:
@@ -57,7 +71,10 @@ const services: Service[] = [
       },
       {
         id: 4,
-        title: "DESIGN PROSES PRODUKSI BERSIH & 3R",
+        title: {
+          en: "DESIGN OF CLEAN PRODUCTION PROCESS & 3R",
+          id: "DESIGN PROSES PRODUKSI BERSIH & 3R",
+        },
         subtitle: "(Reuse, reduce, dan recycle)",
         image: "/images/services-1-4.png",
         description:
@@ -67,40 +84,58 @@ const services: Service[] = [
   },
   {
     id: 2,
-    name: "Audit Lingkungan Hidup",
+    name: {
+      en: "Environment Audit",
+      id: "Audit Lingkungan Hidup",
+    },
     image: "/images/services-2.png",
     contents: [
       {
         id: 1,
-        title: "AUDIT WAJIB BERKALA RISIKO TINGGI",
+        title: {
+          en: "REGULAR MANDATORY HIGH RISK AUDITS",
+          id: "AUDIT WAJIB BERKALA RISIKO TINGGI",
+        },
         image: "/images/services-2-1.png",
         description:
           "TABLINK memiliki perhatian tinggi pada kegiatan audit wajib berkala risiko tinggi, karena sifat bahaya kegiatan dan/atau usaha berisiko tinggi memang bisa mengancam lingkungan hidup dan terutama masyarakat dalam radius yang luas. Pelibatan ahli berbagai bidang ilmu pengetahuan dan teknologi (IPTEK) sesuai kebutuhan mutlak diperlukan agar bisa diperoleh hasil audit dengan kualitas terbaik.",
       },
       {
         id: 2,
-        title: "AUDIT WAJIB/GAKKUM (MANDATORY)",
+        title: {
+          en: "MANDATORY/NOT COMPULSORY AUDIT",
+          id: "AUDIT WAJIB/GAKKUM (MANDATORY)",
+        },
         image: "/images/services-2-2.png",
         description:
           "Pada saat tertentu, karena suatu hal, negara (dalam hal ini KLHK) mewajibkan suatu kegiatan dan/atau usaha untuk melakukan audit wajib (mandatory), misal dalam rangka penegakan hukum atau perselisihan lingkungan hidup. TABLINK dengan didukung berbagai keahlian IPTEK independen siap untuk melaksanaan tugas itu.",
       },
       {
         id: 3,
-        title: "AUDIT SUKARELA & INTERNAL",
+        title: {
+          en: "VOLUNTARY & INTERNAL AUDITS",
+          id: "AUDIT SUKARELA & INTERNAL",
+        },
         image: "/images/services-2-3.png",
         description:
           "Sesuai namanya, kegiatan audit ini bersifat sukarela atau internal. Biasanya karena kebutuhan permintaan konsumen atau rekanan bisnis, persyaratan market luar, untuk keperluan pengawasan internal grup perusahaan, untuk evaluasi rutin, dll.",
       },
       {
         id: 4,
-        title: "SUPERVISI PREPARASI AUDIT (PREAUDIT)",
+        title: {
+          en: "AUDIT PREPARATION (PREAUDIT) SUPERVISION",
+          id: "SUPERVISI PREPARASI AUDIT (PREAUDIT)",
+        },
         image: "/images/services-2-4.png",
         description:
           "Kegiatan preaudit biasanya dijadwalkan untuk keperluan persiapan audit manajemen lingkungan yang sesungguhnya akan diselenggarakan dalam waktu dekat. Tujuannya agar tidak terlalu banyak temuan audit, karena berbagai aktivitas produksi yang masih salah secara aturan perundang-undangan lingkungan hidup dan/atau persyaratan lain bisa segera dikoreksi sebelum hari-H.",
       },
       {
         id: 5,
-        title: "SUPERVISI PREPARASI PROPER",
+        title: {
+          en: "PROPER PREPARATION SUPERVISION",
+          id: "SUPERVISI PREPARASI PROPER",
+        },
         image: "/images/services-2-5.png",
         description:
           "Aktivitas penilaian peringkat PROPER sesungguhnya mirip kegiatan audit. Sejumlah industri memerlukan jasa pendampingan atau supervisor agar berbagai faktor yang menjadi penilaian PROPER bisa dinilai dan dievaluasi terlebih dulu secara internal agar bisa segera diperbaiki.",
@@ -109,33 +144,48 @@ const services: Service[] = [
   },
   {
     id: 3,
-    name: "Preparasi Penyusunan & Revisi Dokumen Lingkungan",
+    name: {
+      en: "Preparation, Drafting, and Revision of Environment Documents",
+      id: "Preparasi, Penyusunan, dan Revisi Dokumen Lingkungan",
+    },
     image: "/images/services-3.png",
     contents: [
       {
         id: 1,
-        title: "SUPERVISI PREPARASI PERTEK",
+        title: {
+          en: "PERTEK PREPARATION SUPERVISION",
+          id: "SUPERVISI PREPARASI PERTEK",
+        },
         image: "/images/services-3-1.png",
         description:
           "Kegiatan mengurus berbagai perizinan kegiatan pengelolaan lingkungan melalui PERTEK menjadi tanggung jawab setiap perusahaan. Meski dirasa lebih kompleks dalam pengurusannya, dengan sejumlah pertanyaan dan persyaratan teknis yang harus dijawab dan disediakan oleh pihak perusahaan, banyak perusahaan, melalui staf khususnya, mampu melakukan pengurusan perizinan tersebut secara mandiri. Namun, terdapat pula beberapa perusahaan, yang karena suatu hal, masih membutuhkan jasa pendampingan dan supervisi berbagai kegiatan persiapan pengurusan PERTEK hingga terbit SLO tersebut.",
       },
       {
         id: 2,
-        title: "PENYUSUNAN & DOKUMEN REVISI UKL - UPL/AMDAL",
+        title: {
+          en: "DRAFTING & REVISION OF UKL - UPL/AMDAL DOCUMENTS",
+          id: "PENYUSUNAN & REVISI DOKUMEN UKL - UPL/AMDAL",
+        },
         image: "/images/services-3-2.png",
         description:
           "Bisa dimaklumi, dengan berjalannya waktu, data-data dan informasi yang tercantum di dalam dokumen UKL-UPL/AMDAL bisa saja sudah tidak sesuai lagi, karena antara lain kapasitas produksi berubah, diagram alir proses produksi berubah, bahan baku atau penunjang berubah, jenis produk berubah, dsb. Untuk itu diperlukan kegiatan revisi dokumen UKL-UPL/AMDAL sesuai dengan kebutuhan perubahan dan persyaratan.",
       },
       {
         id: 3,
-        title: "PENYUSUNAN DOKUMEN RKL - RPL",
+        title: {
+          en: "DRAFTING OF RKL - RPL DOCUMENTS",
+          id: "PENYUSUNAN DOKUMEN RKL - RPL",
+        },
         image: "/images/services-3-3.png",
         description:
           "Kegiatan pemantauan dan pengelolaan lingkungan wajib dibuat oleh perusahaan sebulan sekali dan digabung dalam suatu laporan RKL-RPL setiap 3 bulan sekali untuk dikirim ke DLH setempat. Terkadang ada juga perusahaan yang ingin dibantu konsultan untuk menyusun laporan RKL-RPL tersebut.",
       },
       {
         id: 4,
-        title: "SUPERVISI PREPARASI IZIN PENGELOLAAN LIMBAH B3",
+        title: {
+          en: "PREPARATION SUPERVISION OF B3 WASTE MANAGEMENT LICENSE",
+          id: "SUPERVISI PREPARASI IZIN PENGELOLAAN LIMBAH B3",
+        },
         image: "/images/services-3-4.png",
         description:
           "Semua kegiatan pengelolaan Limbah B3 (kecuali Reduksi Limbah B3) wajib memiliki izin pengelolaan limbah B3, antara lain kegiatan penyimpanan sementara, pengangkutan, pengumpulan, pemanfaatan, pengolahan, dan penimbunan akhir. Karena banyaknya persyaratan teknis dan administrasi, perusahaan selain bisa mengurus sendiri izinnya, juga bisa minta dibantu atau didampingi supervisor.",
@@ -150,6 +200,8 @@ export default function Services() {
       duration: 1000,
     });
   }, []);
+
+  const [language, _] = useLanguage();
 
   const searchParams = useSearchParams();
   const serviceID = searchParams.get("id");
@@ -184,7 +236,7 @@ export default function Services() {
                 } p-[1rem] font-bold transition-all hover:scale-[1.05]`}
                 onClick={() => setCurrentService(idx)}
               >
-                {service.name}
+                {service.name[language!]}
               </button>
             );
           })}
@@ -203,7 +255,7 @@ export default function Services() {
                 key={content.id}
                 className="bg-green-2 text-white p-[1rem] text-center flex flex-col gap-[2rem]"
               >
-                <p className="font-bold">{content.title}</p>
+                <p className="font-bold">{content.title[language!]}</p>
                 {content.subtitle && <p>{content.subtitle}</p>}
               </div>
             );
@@ -220,7 +272,7 @@ export default function Services() {
                   }`}
                 >
                   <h1 className="font-bold text-orange text-[2rem]">
-                    {content.title}
+                    {content.title[language!]}
                   </h1>
                   {content.subtitle && (
                     <h2 className="font-bold">{content.subtitle}</h2>
@@ -233,7 +285,7 @@ export default function Services() {
                 >
                   <Image
                     src={content.image!}
-                    alt={content.title}
+                    alt={content.title[language!]}
                     width={525}
                     height={266}
                     className="w-full lg:w-[50%]"
