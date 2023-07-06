@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <>
       <ScrollUp />
-      <Navbar name="Tentang Kami" />
+      <Navbar name="About" />
       <About />
       <Footer />
     </>
