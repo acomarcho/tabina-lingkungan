@@ -186,7 +186,7 @@ const services: Service[] = [
         },
         image: "/images/services-3-1.png",
         description: {
-          en: "Placeholder description",
+          en: "The activity of managing various permits for the management of environmental activities through PERTEK is every company's responsibility. Although it is considered more complex in its' management, with a number of questions and technical requirements that must be answered and met by the company, many companies, through staff in particular, are able to manage those permits independently. However, there are also several companies, who for some reason, still need assistance and supervision service in various PERTEK preparations to publish the SLO.",
           id: "Kegiatan mengurus berbagai perizinan kegiatan pengelolaan lingkungan melalui PERTEK menjadi tanggung jawab setiap perusahaan. Meski dirasa lebih kompleks dalam pengurusannya, dengan sejumlah pertanyaan dan persyaratan teknis yang harus dijawab dan disediakan oleh pihak perusahaan, banyak perusahaan, melalui staf khususnya, mampu melakukan pengurusan perizinan tersebut secara mandiri. Namun, terdapat pula beberapa perusahaan, yang karena suatu hal, masih membutuhkan jasa pendampingan dan supervisi berbagai kegiatan persiapan pengurusan PERTEK hingga terbit SLO tersebut.",
         },
       },
@@ -198,7 +198,7 @@ const services: Service[] = [
         },
         image: "/images/services-3-2.png",
         description: {
-          en: "Placeholder description",
+          en: "Understandably, with the passage of time, data and informations that are listed in UKL-UPL/AMDAL document can no longer be appropriate due to certain things like change of production capacity, change of production flowchart, change of raw and/or supporting materials, change of product type, et cetera. This requires activities involving revisions of UKL-UPL/AMDAL document to meet the changing needs and requirements.",
           id: "Bisa dimaklumi, dengan berjalannya waktu, data-data dan informasi yang tercantum di dalam dokumen UKL-UPL/AMDAL bisa saja sudah tidak sesuai lagi, karena antara lain kapasitas produksi berubah, diagram alir proses produksi berubah, bahan baku atau penunjang berubah, jenis produk berubah, dsb. Untuk itu diperlukan kegiatan revisi dokumen UKL-UPL/AMDAL sesuai dengan kebutuhan perubahan dan persyaratan.",
         },
       },
@@ -210,7 +210,7 @@ const services: Service[] = [
         },
         image: "/images/services-3-3.png",
         description: {
-          en: "Placeholder description",
+          en: "Mandatory environmental monitoring and management activities are made by the company once a month and are merged in a RKL-RPL report every 3 months to be sent to the local DLH. Sometimes, there are also companies that wants to be helped by a consultant to prepare the RKL-RPL report.",
           id: "Kegiatan pemantauan dan pengelolaan lingkungan wajib dibuat oleh perusahaan sebulan sekali dan digabung dalam suatu laporan RKL-RPL setiap 3 bulan sekali untuk dikirim ke DLH setempat. Terkadang ada juga perusahaan yang ingin dibantu konsultan untuk menyusun laporan RKL-RPL tersebut.",
         },
       },
@@ -222,7 +222,7 @@ const services: Service[] = [
         },
         image: "/images/services-3-4.png",
         description: {
-          en: "Placeholder description",
+          en: "All hazardous waste management activities (excluding hazardous waste reduction) must have B3 waste panagement permit: temporary storage, transportation, collection, utilization, processing, and final hoard. Due to the large number of technical requirements and administration, the company can either take care of the permit by themselves or ask to be helped or accompanied by a supervisor.",
           id: "Semua kegiatan pengelolaan Limbah B3 (kecuali Reduksi Limbah B3) wajib memiliki izin pengelolaan limbah B3, antara lain kegiatan penyimpanan sementara, pengangkutan, pengumpulan, pemanfaatan, pengolahan, dan penimbunan akhir. Karena banyaknya persyaratan teknis dan administrasi, perusahaan selain bisa mengurus sendiri izinnya, juga bisa minta dibantu atau didampingi supervisor.",
         },
       },
