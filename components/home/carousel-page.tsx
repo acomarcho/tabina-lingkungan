@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useLanguage, Language } from "@/hooks/use-language";
 
 interface Props {
   page: {
-    title: string;
-    description: string;
+    title: Language;
+    description: Language;
     position: string;
     images: string[];
     serviceID: number;
@@ -16,6 +17,7 @@ interface Props {
 export default function CarouselPage({ page }: Props) {
   const [imageIndex, setImageIndex] = useState<number>(0);
   const imageTimeout = 3000;
+  const [language, _] = useLanguage();
 
   useEffect(() => {
     const changeImageTimeout = setTimeout(() => {
@@ -29,7 +31,7 @@ export default function CarouselPage({ page }: Props) {
     return () => {
       clearTimeout(changeImageTimeout);
     };
-  }, [imageIndex]);
+  }, [imageIndex, page.images.length]);
 
   let responsiveLayout = "";
   if (page.position === "topRight") {
@@ -55,10 +57,11 @@ export default function CarouselPage({ page }: Props) {
           className={`bg-transparent w-[100%] lg:max-w-[480px] p-[2rem] relative ${responsiveLayout}`}
         >
           <h1 className="font-bold text-white text-[2rem] lg:text-[2.5rem]">
-            {page.title}
+            {page.title[language!]}
           </h1>
+          {language}
           <p className="text-white text-[1rem] lg:text-[1.25rem]">
-            {page.description}
+            {page.description[language!]}
           </p>
           <div className="flex gap-[0.5rem] absolute bottom-[-1.5rem] left-[1.5rem] lg:bottom-[-2rem] lg:left-[2rem] md:gap-[1.5rem]">
             <a
@@ -67,13 +70,13 @@ export default function CarouselPage({ page }: Props) {
               rel="noreferrer"
               className="bg-orange text-black px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.02] text-[0.9rem] md:text-[1rem] lg:text-[1.25rem] hover:!text-black"
             >
-              Hubungi kami
+              {language === "id" ? "Hubungi kami" : "Contact us"}
             </a>
             <Link
               href={`/services?id=${page.serviceID}`}
               className="bg-green px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.02] text-[0.9rem] md:text-[1rem] lg:text-[1.25rem] hover:!text-black"
             >
-              Selengkapnya
+              {language === "id" ? "Selengkapnya" : "More"}
             </Link>
           </div>
         </div>

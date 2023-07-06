@@ -3,25 +3,54 @@
 import Image from "next/image";
 import { IconMenu2 } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
-import { Drawer } from "@mantine/core";
+import { useLanguage, Language } from "@/hooks/use-language";
+import { Drawer, Select } from "@mantine/core";
 import Link from "next/link";
 
-const links = [
+interface Links {
+  name: Language;
+  path: string;
+}
+
+const links: Links[] = [
   {
-    name: "Home",
+    name: {
+      en: "Home",
+      id: "Beranda",
+    },
     path: "/",
   },
   {
-    name: "Layanan",
+    name: {
+      en: "Services",
+      id: "Layanan",
+    },
     path: "/services",
   },
   {
-    name: "Tentang Kami",
+    name: {
+      en: "About",
+      id: "Tentang Kami",
+    },
     path: "/about",
   },
   {
-    name: "Portofolio",
+    name: {
+      en: "Portfolio",
+      id: "Portofolio",
+    },
     path: "/portfolio",
+  },
+];
+
+const languages = [
+  {
+    value: "en",
+    label: "🇬🇧 English",
+  },
+  {
+    value: "id",
+    label: "🇮🇩 Bahasa Indonesia",
   },
 ];
 
@@ -31,6 +60,7 @@ interface NavbarProps {
 
 export default function Navbar({ name }: NavbarProps) {
   const [opened, { open, close }] = useDisclosure(false);
+  const [language, setLanguage] = useLanguage();
 
   return (
     <>
@@ -65,21 +95,31 @@ export default function Navbar({ name }: NavbarProps) {
             {links.map((link) => {
               return (
                 <Link
-                  key={link.name}
+                  key={link.name.en}
                   href={link.path}
                   className={`${
-                    link.name === name
+                    link.name.en === name
                       ? "text-orange font-bold underline"
                       : "text-black"
                   }`}
                 >
-                  {link.name}
+                  {link.name[language!]}
                 </Link>
               );
             })}
           </div>
           <hr className="mt-[2rem]" />
-          <p className="mt-[2rem]">Senin - Jumat 08.00 - 17.00</p>
+          <Select
+            value={language}
+            onChange={setLanguage}
+            data={languages}
+            className="mt-[2rem]"
+          />
+          <p className="mt-[2rem]">
+            {language === "id"
+              ? "Senin - Jumat 08.00 - 17.00"
+              : "Monday - Friday 08.00 - 17.00"}
+          </p>
         </Drawer>
       </div>
       {/* Desktop navbar */}
@@ -98,21 +138,30 @@ export default function Navbar({ name }: NavbarProps) {
               {links.map((link) => {
                 return (
                   <Link
-                    key={link.name}
+                    key={link.name.en}
                     href={link.path}
                     className={`${
-                      link.name === name
+                      link.name.en === name
                         ? "text-orange-2 font-bold underline"
                         : "text-white"
                     } transition-all hover:translate-x-[0.25rem] hover:underline`}
                   >
-                    {link.name}
+                    {link.name[language!]}
                   </Link>
                 );
               })}
             </div>
-            <div>
-              <p className="text-white">Senin - Jumat 08.00 - 17.00</p>
+            <div className="flex items-center gap-[1rem] space-between">
+              <Select
+                value={language}
+                onChange={setLanguage}
+                data={languages}
+              />
+              <p className="text-white">
+                {language === "id"
+                  ? "Senin - Jumat 08.00 - 17.00"
+                  : "Monday - Friday 08.00 - 17.00"}
+              </p>
             </div>
           </div>
         </div>

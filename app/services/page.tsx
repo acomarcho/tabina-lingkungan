@@ -12,7 +12,7 @@ export default function ServicesPage() {
   return (
     <>
       <ScrollUp />
-      <Navbar name="Layanan" />
+      <Navbar name="Services" />
       <Services />
       <Footer />
     </>

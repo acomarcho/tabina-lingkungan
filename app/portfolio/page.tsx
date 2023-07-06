@@ -12,7 +12,7 @@ export default function PortfolioPage() {
   return (
     <>
       <ScrollUp />
-      <Navbar name="Portofolio" />
+      <Navbar name="Portfolio" />
       <MyCarousel />
       <Footer />
     </>

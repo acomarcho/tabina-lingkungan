@@ -13,12 +13,16 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { useLanguage } from "@/hooks/use-language";
+
 export default function About() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
   }, []);
+
+  const [language, _] = useLanguage();
 
   return (
     <>
@@ -34,30 +38,21 @@ export default function About() {
               PT Tabina Lingkungan
             </h1>
             <p>
-              Didirikan pada tahun 1996, PT Tabina Lingkungan (TAB-LINK)
-              berkonsentrasi di kegiatan usaha bidang konsultasi teknologi dan
-              pengelolaan berbagai jenis limbah, khususnya di bidang design dan
-              penyempurnaan sistem pengolahan air limbah, pengoperasian
-              instalasi air limbah (IPAL), simulasi dan pemodelan sistem, serta
-              pelatihan. TAB-LINK memiliki pelayanan komprehensif untuk
-              melakukan identifikasi masalah, analisis proses dan pemroses, dan
-              optimasi serta desain ulang sistem pengolahan air limbah yang ada.
-              Dalam kegiatan konsultasi tersebut, TAB-LINK didukung oleh
-              berbagai keahlian, antara lain bidang teknik kimia, mikrobiologi,
-              manajemen, serta simulasi dan modeling pengolahan air limbah.
-              Kegiatan simulasi dan modeling tersebut menggunakan berbagai
-              perangkat lunak terbaik yang didedikasikan untuk tujuan
-              efektivitas dan efisiensi kerja.
+              {language === "id"
+                ? `Didirikan pada tahun 1996, PT Tabina Lingkungan (TAB-LINK) berkonsentrasi kegiatan usaha di bidang konsultasi teknologi dan pengelolaan berbagai jenis limbah. Khususnya di bidang desain dan penyempurnaan sistem pengolahan air limbah dan pengoperasian instalasi air limbah (IPAL)
+              `
+                : `Founded in 1996, PT Tabina Lingkungan (TAB-LINK) concentrates business activites in the field of technology consulting and management of various types of waste, particularly in the field of design and improvement of waste water treatment systems and operations of waste water installation (WWTP).`}
             </p>
             <p>
-              Memperhatikan berbagai permasalahan lingkungan kehidupan nyata
-              yang terjadi saat ini dan tantangan yang harus dihadapi pada
-              tataran implementasi dan didukung dengan kemampuan sumber daya
-              manusia (SDM), kami, PT Tabina Lingkungan, mendedikasikan diri
-              untuk kegiatan usaha di berbagai bidang, antara lain bidang
-              konsultasi dan rekayasa teknik, audit lingkungan hidup, preparasi,
-              penyusunan, serta revisi dokumen lingkungan, proses produksi ramah
-              lingkungan, dan mediasi lingkungan.
+              {language === "id"
+                ? `Dalam kegiatan konsultasi tersebut, TAB-LINK didukung oleh berbagai keahlian, antara lain bidang teknik kimia, mikrobiologi, manajemen, serta simulasi dan modeling pengolahan air limbah. Kegiatan simulasi dan modeling tersebut menggunakan berbagai perangkat lunak terbaik yang didedikasikan untuk tujuan efektivitas dan efisiensi kerja.
+              `
+                : `TAB-LINK is supported in this consulting activity by various expertise, such as chemical engineering, microbiology, management, as well as simulation and modeling of waste water treatment. The simulation and modeling activities use the best software dedicated to effectiveness and efficiency of work.`}
+            </p>
+            <p>
+              {language === "id"
+                ? `PT Tabina Lingkungan mendedikasikan diri untuk kegiatan usaha di bidang antara lain konsultasi dan rekayasa teknik, audit lingkungan hidup, preparasi, penyusunan, dan revisi dokumen lingkungan, proses produksi ramah lingkungan, mediasi lingkungan, dan lain-lain.`
+                : `PT Tabina Lingkungan dedicates itself to business activities in the field of engineering consulting & engineering, environmental audit, preparation, compilation, and revision of environmental documents, environmentally friendly production process, environmental mediation, et cetera.`}
             </p>
           </div>
           {/* Image */}
@@ -78,7 +73,9 @@ export default function About() {
             className="px-[2rem] pt-[2rem] text-[1.5rem] italic"
             data-aos="zoom-in"
           >
-            Kenapa harus memilih kami?
+            {language === "id"
+              ? "Kenapa harus memilih kami?"
+              : "Why should you choose us?"}
           </p>
           <div
             className="flex flex-col p-[2rem] gap-[1rem] lg:flex-row"
@@ -86,15 +83,19 @@ export default function About() {
           >
             <div className="flex flex-col gap-[1rem] lg:w-[50%]">
               <h1 className="font-bold text-[2rem] lg:text-[2.5rem]">
-                KONSULTAN TERBAIK PROFESIONAL DIAKUI KLHK
+                {language === "id"
+                  ? "KONSULTAN TERBAIK PROFESIONAL DIAKUI KLHK"
+                  : "BEST PROFESSIONAL CONSULTANT RECOGNIZED BY KLHK"}
               </h1>
               <p>
-                PT TABINA LINGKUNGAN adalah perusahaan jasa konsultan
+                {language === "id"
+                  ? `PT TABINA LINGKUNGAN adalah perusahaan jasa konsultan
                 profesional dan bersertifikasi resmi yang bergerak di bidang
                 lingkungan. Kami memiliki visi untuk diakui sebagai pemimpin dan
                 otoritas di Indonesia dalam pengolahan air limbah seperti
                 operasi, pendampingan, perancangan, simulasi sistem, teknologi,
-                serta pengawasan dan pelatihan.
+                serta pengawasan dan pelatihan.`
+                  : `PT TABINA LINGKUNGAN is a professional consulting and service company officially certified working in the environmental field. Together with our experienced team, we have a vision to be recognized as Indonesia's leader and authority in water treatment waste in operation, assistance, design, system simulation, techonology, supervision, and training.`}
               </p>
             </div>
             <div
@@ -108,7 +109,9 @@ export default function About() {
                 rel="noreferrer"
               >
                 <p className="font-bold text-center">
-                  Download legalitas perusahaan
+                  {language === "id"
+                    ? "Download legalitas perusahaan"
+                    : "Download company legality"}
                 </p>
                 <IconDownload size={40} />
               </a>
@@ -123,12 +126,14 @@ export default function About() {
             >
               <div className="flex flex-col gap-[1rem]">
                 <h2 className="text-orange font-bold text-[1.5rem]">
-                  Tepat Waktu
+                  {language === "id" ? "Tepat Waktu" : "On Time"}
                 </h2>
                 <p>
-                  Pelaksanaan proyek serta penyelesaian kajian dilakukan secara
+                  {language === "id"
+                    ? `Pelaksanaan proyek serta penyelesaian kajian dilakukan secara
                   cepat, efektif, dan tepat. Pekerjaan selalu efisien dan tepat
-                  sesuai target pekerjaan.
+                  sesuai target pekerjaan.`
+                    : `Project implementation and completion of studies are done quickly, efficiently, and right on target.`}
                 </p>
               </div>
               <IconTargetArrow size={80} />
@@ -140,14 +145,16 @@ export default function About() {
             >
               <div className="flex flex-col gap-[1rem]">
                 <h2 className="text-orange font-bold text-[1.5rem]">
-                  Profesional
+                  {language === "id" ? "Profesional" : "Professional"}
                 </h2>
                 <p>
-                  Pekerjaan dilakukan oleh tenaga ahli profesional yang sudah
+                  {language === "id"
+                    ? `Pekerjaan dilakukan oleh tenaga ahli profesional yang sudah
                   berprofesi puluhan tahun sehingga terjamin kualitas pekerjaan
                   yang dilakukan sesuai dengan standar keahlian profesi. Kami
                   jujur dan apa adanya dalam memberikan keterangan sesuai dengan
-                  fakta lapangan.
+                  fakta lapangan.`
+                    : `Work is carried out by experts that have worked professionally for tens of years. We guarantee that the quality of our works are performed accordingly to professional skills standards.`}
                 </p>
               </div>
               <IconBrandReact size={80} />
@@ -159,12 +166,16 @@ export default function About() {
             >
               <div className="flex flex-col gap-[1rem]">
                 <h2 className="text-orange font-bold text-[1.5rem]">
-                  Bersertifikat Resmi yang Diakui Negara
+                  {language === "id"
+                    ? `Bersertifikat Resmi yang Diakui Negara`
+                    : `Officially Certified by the state`}
                 </h2>
                 <p>
-                  PT Tabina Lingkungan adalah perusahaan jasa konsultan
+                  {language === "id"
+                    ? `PT Tabina Lingkungan adalah perusahaan jasa konsultan
                   profesional dan bersertifikasi resmi BNSP yang diakui KLHK
-                  negara dan memiliki dokumen legal yang jelas.
+                  negara dan memiliki dokumen legal yang jelas.`
+                    : `PT Tabina Lingkungan is a professional consulting service company that is officially certified by BNSP, recognized by the Ministry of Environment and Forestry, and have clear, legal documents.`}
                 </p>
               </div>
               <IconCertificate size={80} />
@@ -191,7 +202,9 @@ export default function About() {
             className="font-bold text-[2.5rem] mt-[2rem] text-center"
             data-aos="zoom-in"
           >
-            Siap Bekerja Sama dengan Anda
+            {language === "id"
+              ? `Siap Bekerja Sama dengan Anda`
+              : `Ready to Cooperate with You`}
           </h1>
         </div>
       </div>

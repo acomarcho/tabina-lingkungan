@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useLanguage } from "@/hooks/use-language";
 
 export default function Footer() {
+  const [language, _] = useLanguage();
+
   return (
     <div className="min-w-screen bg-dark-gray">
       <div className="max-w-[1160px] p-[2rem] mx-auto">
@@ -59,38 +64,38 @@ export default function Footer() {
                 >
                   0821-2534-6205 (WA)
                 </a>
-                <p className="text-white text-[1rem]">021-8476340 (Telepon)</p>
+                {/* <p className="text-white text-[1rem]">021-8476340 (Telepon)</p> */}
               </div>
             </div>
           </div>
           {/* Quick navigation */}
           <div className="flex flex-col gap-[0.5rem] items-start lg:w-[30%]">
             <h2 className="text-white font-bold text-[1.25rem]">
-              Navigasi cepat
+              {language === "id" ? "Navigasi cepat" : "Quick navigation"}
             </h2>
             <Link
               href="/"
               className="text-white transition-all hover:underline hover:pl-[0.5rem]"
             >
-              Home
+              {language === "id" ? "Beranda" : "Home"}
             </Link>
             <Link
               href="/services"
               className="text-white transition-all hover:underline hover:pl-[0.5rem]"
             >
-              Layanan
+              {language === "id" ? "Layanan" : "Services"}
             </Link>
             <Link
               href="/about"
               className="text-white transition-all hover:underline hover:pl-[0.5rem]"
             >
-              Tentang Kami
+              {language === "id" ? "Tentang Kami" : "About"}
             </Link>
             <Link
               href="/portfolio"
               className="text-white transition-all hover:underline hover:pl-[0.5rem]"
             >
-              Portofolio
+              {language === "id" ? "Portofolio" : "Portfolio"}
             </Link>
           </div>
         </div>
