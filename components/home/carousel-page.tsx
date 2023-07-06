@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useLanguage, Language } from "@/hooks/use-language";
 
 interface Props {
   page: {
     title: string;
-    description: string;
+    description: Language;
     position: string;
     images: string[];
     serviceID: number;
@@ -16,6 +17,7 @@ interface Props {
 export default function CarouselPage({ page }: Props) {
   const [imageIndex, setImageIndex] = useState<number>(0);
   const imageTimeout = 3000;
+  const [language, setLanguage] = useLanguage();
 
   useEffect(() => {
     const changeImageTimeout = setTimeout(() => {
@@ -29,7 +31,7 @@ export default function CarouselPage({ page }: Props) {
     return () => {
       clearTimeout(changeImageTimeout);
     };
-  }, [imageIndex]);
+  }, [imageIndex, page.images.length]);
 
   let responsiveLayout = "";
   if (page.position === "topRight") {
@@ -57,8 +59,9 @@ export default function CarouselPage({ page }: Props) {
           <h1 className="font-bold text-white text-[2rem] lg:text-[2.5rem]">
             {page.title}
           </h1>
+          {language}
           <p className="text-white text-[1rem] lg:text-[1.25rem]">
-            {page.description}
+            {page.description[language!]}
           </p>
           <div className="flex gap-[0.5rem] absolute bottom-[-1.5rem] left-[1.5rem] lg:bottom-[-2rem] lg:left-[2rem] md:gap-[1.5rem]">
             <a

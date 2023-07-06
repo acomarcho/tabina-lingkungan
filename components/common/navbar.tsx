@@ -8,8 +8,8 @@ import { Drawer, Select } from "@mantine/core";
 import Link from "next/link";
 
 interface Links {
-  name: Language,
-  path: string
+  name: Language;
+  path: string;
 }
 
 const links: Links[] = [

@@ -3,12 +3,16 @@
 import CarouselPage from "./carousel-page";
 import { Carousel } from "@mantine/carousel";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+import { useLanguage } from "@/hooks/use-language";
+import { useEffect } from "react";
 
 const pages = [
   {
     title: "KONSULTASI DAN REKAYASA TEKNIK",
-    description:
-      "(Instalasi Air Limbah, Pengontrol Emisi Udara Landfill dengan Pengaman, Design Proses Produksi Bersih 3R)",
+    description: {
+      en: "",
+      id: "(Instalasi Air Limbah, Pengontrol Emisi Udara Landfill dengan Pengaman, Design Proses Produksi Bersih 3R)",
+    },
     position: "topRight",
     images: [
       "/images/carousel-1-1.png",
@@ -19,8 +23,10 @@ const pages = [
   },
   {
     title: "AUDIT LINGKUNGAN HIDUP",
-    description:
-      "(Audit Wajib Berkala Risiko Tinggi,  Audit Wajib/GAKKUM (Mandatory), Audit Sukarela dan Internal, Supervisi Preparasi Audit (Preadit), Supervisi Preparasi PROPER)",
+    description: {
+      en: "",
+      id: "(Audit Wajib Berkala Risiko Tinggi,  Audit Wajib/GAKKUM (Mandatory), Audit Sukarela dan Internal, Supervisi Preparasi Audit (Preadit), Supervisi Preparasi PROPER)",
+    },
     position: "topLeft",
     images: [
       "/images/carousel-2-1.png",
@@ -31,8 +37,10 @@ const pages = [
   },
   {
     title: "PREPARASI, PENYUSUNAN & REVISI DOKUMEN LINGKUNGAN",
-    description:
-      "(Supervisi Preparasi Pertek, Penyusunan & Revisi Dokumen UKL-UPL/AMDAL, Penyusunan Dokumen RKL-RPL,  Supervisi Preparasi Izin Pengelolaan Limbah B3 Pengangkutan, Pengumpulan, Pemanfaatan, Pengolahan, Penimbunan Akhir)",
+    description: {
+      en: "",
+      id: "(Supervisi Preparasi Pertek, Penyusunan & Revisi Dokumen UKL-UPL/AMDAL, Penyusunan Dokumen RKL-RPL,  Supervisi Preparasi Izin Pengelolaan Limbah B3 Pengangkutan, Pengumpulan, Pemanfaatan, Pengolahan, Penimbunan Akhir)",
+    },
     position: "bottomLeft",
     images: [
       "/images/carousel-3-1.png",
