@@ -70,13 +70,13 @@ export default function CarouselPage({ page }: Props) {
               rel="noreferrer"
               className="bg-orange text-black px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.02] text-[0.9rem] md:text-[1rem] lg:text-[1.25rem] hover:!text-black"
             >
-              Hubungi kami
+              {language === "id" ? "Hubungi kami" : "Contact us"}
             </a>
             <Link
               href={`/services?id=${page.serviceID}`}
               className="bg-green px-[1rem] py-[0.5rem] font-bold pointer transition-all hover:scale-[1.02] text-[0.9rem] md:text-[1rem] lg:text-[1.25rem] hover:!text-black"
             >
-              Selengkapnya
+              {language === "id" ? "Selengkapnya" : "More"}
             </Link>
           </div>
         </div>
