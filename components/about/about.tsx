@@ -168,7 +168,7 @@ export default function About() {
                 <h2 className="text-orange font-bold text-[1.5rem]">
                   {language === "id"
                     ? `Bersertifikat Resmi yang Diakui Negara`
-                    : `Officially Certified by the state`}
+                    : `Officially Certified by the State`}
                 </h2>
                 <p>
                   {language === "id"
