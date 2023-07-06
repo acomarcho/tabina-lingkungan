@@ -59,7 +59,7 @@ export default function Footer() {
                 >
                   0821-2534-6205 (WA)
                 </a>
-                <p className="text-white text-[1rem]">021-8476340 (Telepon)</p>
+                {/* <p className="text-white text-[1rem]">021-8476340 (Telepon)</p> */}
               </div>
             </div>
           </div>
