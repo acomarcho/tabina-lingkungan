@@ -1,7 +1,7 @@
 "use client";
 
 import { atom, useAtom } from "jotai";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 export const languageAtom = atom<string | null>("en");
 
