@@ -3,13 +3,9 @@
 import Image from "next/image";
 import { IconMenu2 } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
-import { useLanguage } from "@/hooks/use-language";
+import { useLanguage, Language } from "@/hooks/use-language";
 import { Drawer, Select } from "@mantine/core";
 import Link from "next/link";
-
-interface Language {
-  [language: string]: string
-};
 
 interface Links {
   name: Language,

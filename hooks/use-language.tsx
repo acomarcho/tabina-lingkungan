@@ -2,6 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 
+export interface Language {
+  [language: string]: string
+};
+
 export function useLanguage(): [string | null, React.Dispatch<React.SetStateAction<string | null>>] {
   const [language, setLanguage] = useState<string | null>("en");
 
