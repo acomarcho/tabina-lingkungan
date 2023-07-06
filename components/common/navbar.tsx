@@ -109,7 +109,17 @@ export default function Navbar({ name }: NavbarProps) {
             })}
           </div>
           <hr className="mt-[2rem]" />
-          <p className="mt-[2rem]">Senin - Jumat 08.00 - 17.00</p>
+          <Select
+            value={language}
+            onChange={setLanguage}
+            data={languages}
+            className="mt-[2rem]"
+          />
+          <p className="mt-[2rem]">
+            {language === "id"
+              ? "Senin - Jumat 08.00 - 17.00"
+              : "Monday - Friday 08.00 - 17.00"}
+          </p>
         </Drawer>
       </div>
       {/* Desktop navbar */}
@@ -147,7 +157,11 @@ export default function Navbar({ name }: NavbarProps) {
                 onChange={setLanguage}
                 data={languages}
               />
-              <p className="text-white">Senin - Jumat 08.00 - 17.00</p>
+              <p className="text-white">
+                {language === "id"
+                  ? "Senin - Jumat 08.00 - 17.00"
+                  : "Monday - Friday 08.00 - 17.00"}
+              </p>
             </div>
           </div>
         </div>
