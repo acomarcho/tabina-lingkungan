@@ -73,7 +73,9 @@ export default function About() {
             className="px-[2rem] pt-[2rem] text-[1.5rem] italic"
             data-aos="zoom-in"
           >
-            Kenapa harus memilih kami?
+            {language === "id"
+              ? "Kenapa harus memilih kami?"
+              : "Why should you choose us?"}
           </p>
           <div
             className="flex flex-col p-[2rem] gap-[1rem] lg:flex-row"
@@ -81,15 +83,19 @@ export default function About() {
           >
             <div className="flex flex-col gap-[1rem] lg:w-[50%]">
               <h1 className="font-bold text-[2rem] lg:text-[2.5rem]">
-                KONSULTAN TERBAIK PROFESIONAL DIAKUI KLHK
+                {language === "id"
+                  ? "KONSULTAN TERBAIK PROFESIONAL DIAKUI KLHK"
+                  : "BEST PROFESSIONAL CONSULTANT RECOGNIZED BY KLHK"}
               </h1>
               <p>
-                PT TABINA LINGKUNGAN adalah perusahaan jasa konsultan
+                {language === "id"
+                  ? `PT TABINA LINGKUNGAN adalah perusahaan jasa konsultan
                 profesional dan bersertifikasi resmi yang bergerak di bidang
                 lingkungan. Kami memiliki visi untuk diakui sebagai pemimpin dan
                 otoritas di Indonesia dalam pengolahan air limbah seperti
                 operasi, pendampingan, perancangan, simulasi sistem, teknologi,
-                serta pengawasan dan pelatihan.
+                serta pengawasan dan pelatihan.`
+                  : `PT TABINA LINGKUNGAN is a professional consulting and service company officially certified working in the environmental field. Together with our experienced team, we have a vision to be recognized as Indonesia's leader and authority in water treatment waste in operation, assistance, design, system simulation, techonology, supervision, and training.`}
               </p>
             </div>
             <div
@@ -103,7 +109,9 @@ export default function About() {
                 rel="noreferrer"
               >
                 <p className="font-bold text-center">
-                  Download legalitas perusahaan
+                  {language === "id"
+                    ? "Download legalitas perusahaan"
+                    : "Download company legality"}
                 </p>
                 <IconDownload size={40} />
               </a>
@@ -118,12 +126,14 @@ export default function About() {
             >
               <div className="flex flex-col gap-[1rem]">
                 <h2 className="text-orange font-bold text-[1.5rem]">
-                  Tepat Waktu
+                  {language === "id" ? "Tepat Waktu" : "On Time"}
                 </h2>
                 <p>
-                  Pelaksanaan proyek serta penyelesaian kajian dilakukan secara
+                  {language === "id"
+                    ? `Pelaksanaan proyek serta penyelesaian kajian dilakukan secara
                   cepat, efektif, dan tepat. Pekerjaan selalu efisien dan tepat
-                  sesuai target pekerjaan.
+                  sesuai target pekerjaan.`
+                    : `Project implementation and completion of studies are done quickly, efficiently, and right on target.`}
                 </p>
               </div>
               <IconTargetArrow size={80} />
@@ -135,14 +145,16 @@ export default function About() {
             >
               <div className="flex flex-col gap-[1rem]">
                 <h2 className="text-orange font-bold text-[1.5rem]">
-                  Profesional
+                  {language === "id" ? "Profesional" : "Professional"}
                 </h2>
                 <p>
-                  Pekerjaan dilakukan oleh tenaga ahli profesional yang sudah
+                  {language === "id"
+                    ? `Pekerjaan dilakukan oleh tenaga ahli profesional yang sudah
                   berprofesi puluhan tahun sehingga terjamin kualitas pekerjaan
                   yang dilakukan sesuai dengan standar keahlian profesi. Kami
                   jujur dan apa adanya dalam memberikan keterangan sesuai dengan
-                  fakta lapangan.
+                  fakta lapangan.`
+                    : `Work is carried out by experts that have worked professionally for tens of years. We guarantee that the quality of our works are performed accordingly to professional skills standards.`}
                 </p>
               </div>
               <IconBrandReact size={80} />
@@ -154,12 +166,16 @@ export default function About() {
             >
               <div className="flex flex-col gap-[1rem]">
                 <h2 className="text-orange font-bold text-[1.5rem]">
-                  Bersertifikat Resmi yang Diakui Negara
+                  {language === "id"
+                    ? `Bersertifikat Resmi yang Diakui Negara`
+                    : `Officially Certified by the state`}
                 </h2>
                 <p>
-                  PT Tabina Lingkungan adalah perusahaan jasa konsultan
+                  {language === "id"
+                    ? `PT Tabina Lingkungan adalah perusahaan jasa konsultan
                   profesional dan bersertifikasi resmi BNSP yang diakui KLHK
-                  negara dan memiliki dokumen legal yang jelas.
+                  negara dan memiliki dokumen legal yang jelas.`
+                    : `PT Tabina Lingkungan is a professional consulting service company that is officially certified by BNSP, recognized by the Ministry of Environment and Forestry, and have clear, legal documents.`}
                 </p>
               </div>
               <IconCertificate size={80} />
@@ -186,7 +202,9 @@ export default function About() {
             className="font-bold text-[2.5rem] mt-[2rem] text-center"
             data-aos="zoom-in"
           >
-            Siap Bekerja Sama dengan Anda
+            {language === "id"
+              ? `Siap Bekerja Sama dengan Anda`
+              : `Ready to Cooperate with You`}
           </h1>
         </div>
       </div>
