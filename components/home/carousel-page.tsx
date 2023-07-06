@@ -56,11 +56,11 @@ export default function CarouselPage({ page }: Props) {
         <div
           className={`bg-transparent w-[100%] lg:max-w-[480px] p-[2rem] relative ${responsiveLayout}`}
         >
-          <h1 className="font-bold text-white text-[2rem] lg:text-[2.5rem]">
+          <h1 className="font-bold text-white text-[2rem]">
             {page.title[language!]}
           </h1>
           {language}
-          <p className="text-white text-[1rem] lg:text-[1.25rem]">
+          <p className="text-white text-[1rem]">
             {page.description[language!]}
           </p>
           <div className="flex gap-[0.5rem] absolute bottom-[-1.5rem] left-[1.5rem] lg:bottom-[-2rem] lg:left-[2rem] md:gap-[1.5rem]">
