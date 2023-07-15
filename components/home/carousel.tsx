@@ -3,8 +3,6 @@
 import CarouselPage from "./carousel-page";
 import { Carousel } from "@mantine/carousel";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
-import { useLanguage } from "@/hooks/use-language";
-import { useEffect } from "react";
 
 const pages = [
   {
@@ -13,8 +11,16 @@ const pages = [
       id: "KONSULTASI DAN REKAYASA TEKNIK",
     },
     description: {
-      en: "(Waste Water Installation, Landfill Air Emission Control with Safeguards, 3R Clean Production Process Design)",
-      id: "(Instalasi Air Limbah, Pengontrol Emisi Udara Landfill dengan Pengaman, Design Proses Produksi Bersih 3R)",
+      en: [
+        "Waste Water Installation",
+        "Landfill Air Emission Control with Safeguards",
+        "3R Clean Production Process Design",
+      ],
+      id: [
+        "Instalasi Air Limbah",
+        "Pengontrol Emisi Udara Landfill dengan Pengaman",
+        "Design Proses Produksi Bersih 3R",
+      ],
     },
     position: "topRight",
     images: [
@@ -30,8 +36,20 @@ const pages = [
       id: "AUDIT LINGKUNGAN HIDUP",
     },
     description: {
-      en: "(High Risk Periodic Compulsory Audit, Compulsory Audit (Mandatory), Voluntary and Internal Audit, Audit Preparation Supervision (Preaudit), PROPER Preparation Supervision)",
-      id: "(Audit Wajib Berkala Risiko Tinggi,  Audit Wajib/GAKKUM (Mandatory), Audit Sukarela dan Internal, Supervisi Preparasi Audit (Preadit), Supervisi Preparasi PROPER)",
+      en: [
+        "High Risk Periodic Compulsory Audit",
+        "Compulsory Audit (Mandatory)",
+        "Voluntary and Internal Audit",
+        "Audit Preparation Supervision (Preaudit)",
+        "PROPER Preparation Supervision",
+      ],
+      id: [
+        "Audit Wajib Berkala Risiko Tinggi",
+        "Audit Wajib/GAKKUM (Mandatory)",
+        "Audit Sukarela dan Internal",
+        "Supervisi Preparasi Audit (Preadit)",
+        "Supervisi Preparasi PROPER",
+      ],
     },
     position: "topLeft",
     images: [
@@ -47,8 +65,18 @@ const pages = [
       id: "PREPARASI, PENYUSUNAN & REVISI DOKUMEN LINGKUNGAN",
     },
     description: {
-      en: "(Supervision of Technology Preparation, Preparation & Revision of UKL-UPL/AMDAL Documents, Preparation of RKL-RPL Document, Supervision of Preparation for Hazardous Waste Management Permit for Transportation, Collection, Utilization, Processing, and Final Storage)",
-      id: "(Supervisi Preparasi Pertek, Penyusunan & Revisi Dokumen UKL-UPL/AMDAL, Penyusunan Dokumen RKL-RPL,  Supervisi Preparasi Izin Pengelolaan Limbah B3 Pengangkutan, Pengumpulan, Pemanfaatan, Pengolahan, dan Penimbunan Akhir)",
+      en: [
+        "Supervision of Technology Preparation",
+        "Preparation & Revision of UKL-UPL/AMDAL Documents",
+        "Preparation of RKL-RPL Document",
+        "Supervision of Preparation for Hazardous Waste Management Permit for Transportation, Collection, Utilization, Processing, and Final Storage",
+      ],
+      id: [
+        "Supervisi Preparasi Pertek",
+        "Penyusunan & Revisi Dokumen UKL-UPL/AMDAL",
+        "Penyusunan Dokumen RKL-RPL",
+        "Supervisi Preparasi Izin Pengelolaan Limbah B3 Pengangkutan, Pengumpulan, Pemanfaatan, Pengolahan, dan Penimbunan Akhir",
+      ],
     },
     position: "bottomLeft",
     images: [
