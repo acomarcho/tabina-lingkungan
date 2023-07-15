@@ -4,10 +4,14 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useLanguage, Language } from "@/hooks/use-language";
 
+interface Description {
+  [language: string]: string[];
+}
+
 interface Props {
   page: {
     title: Language;
-    description: Language;
+    description: Description;
     position: string;
     images: string[];
     serviceID: number;
@@ -59,10 +63,13 @@ export default function CarouselPage({ page }: Props) {
           <h1 className="font-bold text-white text-[2rem]">
             {page.title[language!]}
           </h1>
-          {language}
-          <p className="text-white text-[1rem]">
-            {page.description[language!]}
-          </p>
+          {page.description[language!].map((d) => {
+            return (
+              <p className="text-white text-[1rem]" key={d}>
+                • {d}
+              </p>
+            );
+          })}
           <div className="flex gap-[0.5rem] absolute bottom-[-1.5rem] left-[1.5rem] lg:bottom-[-2rem] lg:left-[2rem] md:gap-[1.5rem]">
             <a
               href="https://api.whatsapp.com/send?phone=6282125346205"

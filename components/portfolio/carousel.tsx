@@ -21,12 +21,8 @@ const pages = [
     image: "/images/portfolio-3.png",
   },
   {
-    title: "PT MANTAPJIWA 2021",
+    title: "PT KERRY INGREDIENTS INDONESIA",
     image: "/images/portfolio-4.png",
-  },
-  {
-    title: "PT NTAH BERENTAH 2023",
-    image: "/images/portfolio-5.png",
   },
 ];
 
@@ -73,9 +69,6 @@ export default function MyCarousel() {
       </Carousel.Slide>
       <Carousel.Slide>
         <CarouselPage page={pages[3]} />
-      </Carousel.Slide>
-      <Carousel.Slide>
-        <CarouselPage page={pages[4]} />
       </Carousel.Slide>
     </Carousel>
   );
