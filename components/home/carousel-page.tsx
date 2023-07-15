@@ -64,7 +64,11 @@ export default function CarouselPage({ page }: Props) {
             {page.title[language!]}
           </h1>
           {page.description[language!].map((d) => {
-            return <p className="text-white text-[1rem]">• {d}</p>;
+            return (
+              <p className="text-white text-[1rem]" key={d}>
+                • {d}
+              </p>
+            );
           })}
           <div className="flex gap-[0.5rem] absolute bottom-[-1.5rem] left-[1.5rem] lg:bottom-[-2rem] lg:left-[2rem] md:gap-[1.5rem]">
             <a
