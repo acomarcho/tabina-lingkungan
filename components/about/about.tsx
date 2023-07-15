@@ -5,7 +5,7 @@ import Image from "next/image";
 import {
   IconDownload,
   IconTargetArrow,
-  IconBrandReact,
+  IconShieldCheckFilled,
   IconCertificate,
 } from "@tabler/icons-react";
 
@@ -104,9 +104,9 @@ export default function About() {
             >
               <a
                 className="border-2 border-black p-[1rem] flex flex-col gap-[1rem] items-center transition-all hover:bg-black hover:text-white lg:max-w-[20rem]"
-                href="https://www.google.com"
+                href="/files/company_profile_PT_Tabina_Lingkungan_2022.pdf"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <p className="font-bold text-center">
                   {language === "id"
@@ -151,13 +151,11 @@ export default function About() {
                   {language === "id"
                     ? `Pekerjaan dilakukan oleh tenaga ahli profesional yang sudah
                   berprofesi puluhan tahun sehingga terjamin kualitas pekerjaan
-                  yang dilakukan sesuai dengan standar keahlian profesi. Kami
-                  jujur dan apa adanya dalam memberikan keterangan sesuai dengan
-                  fakta lapangan.`
+                  yang dilakukan sesuai dengan standar keahlian profesi.`
                     : `Work is carried out by experts that have worked professionally for tens of years. We guarantee that the quality of our works are performed accordingly to professional skills standards.`}
                 </p>
               </div>
-              <IconBrandReact size={80} />
+              <IconShieldCheckFilled size={80} />
             </div>
             {/* Bersertifikat resmi */}
             <div
